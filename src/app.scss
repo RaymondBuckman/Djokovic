@@ -1,0 +1,1000 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Open+Sans+Condensed:300|Geo|Rock+Salt|Special+Elite');
+
+//variables
+$main-font: "Rock Salt", sans-serif;
+$secondary-font: "Open Sans Condensed";
+
+$nrf: no-repeat fixed;
+$nrs: no-repeat scroll;
+
+$main-color: #414445;
+$secondary-color: #fff;
+$tertiary-color: #369ac2;
+
+$arrow-rotate-out: all 2.0s cubic-bezier(.37,1.01,.8,.99);
+$color-hover: color 0.3s ease-in-out;
+
+$one-height: 100vw * .6668; //Multiple based on image proportions
+$three-height: 120vw * .7492; //Multiple based on image proportions
+$four-height: 100vw * .5625; //Multiple based on image proportions
+$eleven-height: 100vw * .7492; //Multiple based on image proportions
+
+//keyframes
+@keyframes occasionalBlurOnHover{
+	20%, 52%	{-webkit-filter: blur(0px); -moz-filter: blur(0px);}
+	36%		    {-webkit-filter: blur(1.5px); -moz-filter: blur(1.5px);}
+}
+
+@keyframes occasionalBlur{
+	20%, 52%	{-webkit-filter: blur(0px); -moz-filter: blur(0px);}
+	36%		    {-webkit-filter: blur(1.5px); -moz-filter: blur(1.5px);}
+}
+
+@keyframes occasional-brightness{
+    20%, 30%	{-webkit-filter: brightness(100%); -moz-filter: brightness(100%);}
+	25%		    {-webkit-filter: brightness(110%); -moz-filter: brightness(110%);}
+}
+
+@keyframes colorSwitch{
+    0%, 40% {color: $secondary-color; background-color: $tertiary-color;}
+    50%, 90% {color: $main-color; background-color: $secondary-color;}
+}
+
+@keyframes borderColorSwitch{
+    0%, 40% {border-bottom-color: $tertiary-color;}
+    50%, 90% {border-bottom-color: $main-color;}
+}
+
+@keyframes moveArrows{
+    0% { transform: translateY(0px);}
+    50% {transform: translateY(10px);}
+}
+
+//mixins
+@mixin main-font{
+    font-family: $main-font, Arial, Helvetica, serif;
+}
+
+@mixin secondary-font{
+    font-family: $secondary-font, Arial, Helvetica, serif;
+}
+
+@mixin underscore{
+    display:block;
+    content:  '';
+    border-bottom: solid 5px $tertiary-color;
+    border-radius: 15px;
+    transform: scaleX(0);
+    transition: transform 500ms ease-in-out;
+}
+
+@mixin nav-color-change{
+    border-radius: 20px;
+    transition: all 0.3s ease-in;
+        
+    &:hover{
+        background: $secondary-color;
+        color: $tertiary-color;
+        animation: occasionalBlurOnHover 4s infinite;      
+    }
+}
+
+@mixin occasional-brightness{
+    animation: occasional-brightness 8s infinite;
+}
+
+@mixin global-padding{
+    padding: 0 10vw;
+}
+
+@mixin flex-display{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+
+@mixin for-small-phone-portrait {
+    @media (max-width: 399px){ @content; }
+}
+
+@mixin for-large-phone-portrait {
+    @media (min-width: 400px) and (max-width: 599px) { @content; }
+}
+
+@mixin for-small-tablet-portrait {
+    @media (min-width: 600px) and (max-width: 899px) and (orientation: portrait){ @content; }
+}
+
+@mixin for-phone-landscape {
+    @media (min-width: 600px) and (max-width: 899px) and (orientation: landscape){ @content; }
+}
+
+@mixin for-large-tablet-portrait {
+    @media (min-width: 900px) and (max-width: 1199px) and (orientation: portrait){ @content; }
+}
+
+@mixin for-tablet-landscape {
+    @media (min-width: 900px) and (max-width: 1199px) and (orientation: landscape){ @content; }
+}
+
+@mixin for-small-desktop-or-large-tablet-landscape {
+    @media (min-width: 1200px) and (max-width: 1399px){ @content; }
+}
+
+@mixin for-2K-and-4K-desktop-landscape {
+    @media (min-width: 1921px){ @content; }
+}
+
+/*@mixin for-big-desktop {
+    @media (min-width: 1800px) { @content; }
+}*/
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+//------------RESET-------------
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+body {
+    background: $main-color;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    user-select: none;
+    cursor: default;
+    overflow-x: hidden;  
+}
+
+h1{
+    @include main-font;
+}
+
+h2, p{
+    @include secondary-font;
+}
+
+.App{
+    position: relative;
+    width: 100%;
+    background: url("img/grid.jpg") $nrf 50% 50%;
+    background-size: cover;
+}
+
+#hamburger{
+    position: fixed;
+    top: 15px;
+    left: 5px;
+    display: inline-block;
+    opacity: 0.5;
+    transition: all 0.3s ease-in;
+    z-index: 99;
+    
+    &:hover{
+        opacity: 1;
+        transform: scale(1.1);
+    }
+}
+
+#djokovic-logo{
+    position: fixed;
+    top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    display: inline-block;
+    opacity: 0.5;
+    transition: all 0.3s ease-in;
+    z-index: 99;
+    
+    &:hover{
+        opacity: 1;
+        transform: scale(1.1);
+    }
+}
+
+.Intro-1{
+    position: relative;
+    height: 100vh;
+    background: url("img/djokovic-large-01.jpg") repeat fixed -110% 26%;
+    background-size: 110vw;
+    
+    #intro-video{
+        position: relative;
+        top: 13vh;
+        //left: -30px;
+        display: block;
+        margin: 0 auto;
+        padding: 10px;
+    }
+
+    #intro-main-header{
+        position: relative;
+        top: 13vh;
+        font-size: 5em;
+        color: #fff;
+    }
+}
+
+.Intro-2{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    
+    .flex-container-1{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+
+        -webkit-flex-flow: wrap;
+        justify-content: space-around;
+    }
+
+    .flex-item {
+        margin: 0px;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        
+        &:nth-child(1){
+            height: 100vh;
+            width: 33vw;
+            background: url("img/belgrade-02.jpg") $nrs 60% 50%;
+            background-size: cover;
+            
+            #belgrade-serbia{
+                position: relative;
+                top: 600px;
+                color: #fff;
+                font-size: 2em;         
+            }
+        }
+        
+        &:nth-child(2){
+            height: 50vh;
+            width: 67vw;
+            
+            .flex-container-2{
+                padding: 0;
+                margin: 0;
+                list-style: none;
+
+                display: -webkit-box;
+                display: -moz-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+
+                -webkit-flex-flow: wrap;
+                justify-content: space-around;
+            }
+
+            .flex-item {
+                background: tomato;
+                width: 67vw;
+                margin: 0px;
+
+                line-height: 30px;
+                color: white;
+                font-weight: bold;
+                text-align: center;
+
+                &:nth-child(1){
+                    height: 50vh;
+                    background: url("img/serbian-flag.jpg") $nrs 0% 50%;
+                    background-size: cover;
+                }
+
+                &:nth-child(2){
+                    height: 50vh;
+                    background: rgb(0,0,150);
+                    background-size: contain;
+                    padding: 50px;
+                    
+                    #the-origin-of-a-champion{
+                        position: relative;
+                        top: 0px;
+                        color: #fff;
+                        font-size: 2em;
+                    }
+                    
+                    p{
+                        position: relative;
+                        top: 30px;
+                        color: #fff;
+                        font-size: 1.3em;
+                        margin: 0px 60px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.Titles-1 {
+    position: relative;
+    height: auto;
+    width: 100vw;
+    background: url("./img/black-wallpaper-01.jpg") $nrf center;
+    background-size: cover;
+        
+    .flex-container {
+          padding: 5vh 5vw;
+          margin: 0;
+          list-style: none;
+
+          display: -webkit-box;
+          display: -moz-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          display: flex;
+
+          -webkit-flex-flow: row wrap;
+          justify-content: space-around;
+        }
+
+    .flex-item {
+        //padding: 5px;
+        width: 290px;
+        height: 490px;
+        margin-top: 10px;
+        color: white;
+        text-align: center;
+        filter: grayscale(30%);
+        
+        h2{
+            font-size: 1.5em
+        }
+        
+        &:nth-child(1){
+            width: 100vw;
+            height: 100px;
+            background: transparent;
+            
+            #titles{
+                position: relative;
+                top: -10px;
+                color: #fff;
+                @include main-font;
+                font-size: 3.5em;
+            }
+        }
+        
+        &:nth-child(2){
+            width: 20vw;
+            height: 430px;
+            background: url("img/australian-open-01.jpg") $nrs 50% 50%;
+            background-size: 800px;
+            transition: all 0.3s ease-in-out;
+            
+            #ao-titles{
+                position: relative;
+                top: 350px;
+            }
+            
+            &:hover{
+                background-size: 900px; 
+                filter: grayscale(0%);
+            }
+        }
+        
+        &:nth-child(3){
+            width: 20vw;
+            height: 430px;
+            background: url("img/roland-garros-01.jpg") $nrs 25% 50%;
+            background-size: 800px;
+            transition: all 0.3s ease-in-out;
+            
+            #fo-titles{
+                position: relative;
+                top: 350px;
+            }
+            
+            &:hover{
+                background-size: 900px;
+                filter: grayscale(0%);
+            }
+        }
+        
+        &:nth-child(4){
+            width: 20vw;
+            height: 430px;
+            background: url("img/wimbledon-02.jpg") $nrs 50% 70%;
+            background-size: 800px;
+            transition: all 0.3s ease-in-out;
+            
+            #w-titles{
+                position: relative;
+                top: 350px;
+            }
+            
+            &:hover{
+                background-size: 900px;
+                filter: grayscale(0%);
+            }   
+            
+        }
+        
+        &:nth-child(5){
+            width: 20vw;
+            height: 430px;
+            background: url("img/us-open-01.jpg") $nrs 50% 50%;
+            background-size: 800px;
+            transition: all 0.3s ease-in-out;
+            
+            #uso-titles{
+                position: relative;
+                top: 350px;
+            }
+            
+            &:hover{
+               background-size: 900px; 
+            }
+        }
+        
+        &:nth-child(6){
+            width: 80vw;
+            height: 150px;
+            background: transparent;
+            
+            li{
+                color: #fff;
+                @include secondary-font;
+                font-size: 1.5em;
+                list-style: none;
+                
+            }
+        }
+    }
+}
+
+#app > div:nth-child(4) > div > ul > li:nth-child(1){
+    margin: 0px !important;
+}
+
+.Movement-1{
+    position: relative;
+    height: 110vh;
+    background: url("img/djokovic-large-09.jpg") repeat fixed 90% 26%;
+    background-size: 110vw;
+    
+    #movement-video{
+        position: relative;
+        top: 13vh;
+        //left: -30px;
+        display: block;
+        margin: 0 auto;
+        padding: 10px;
+    }
+
+    #movement-main-header{
+        position: relative;
+        top: 13vh;
+        font-size: 5em;
+        color: #fff;
+    }
+    
+    #movement-secondary-header{
+        position: relative;
+        top: 7vh;
+        font-size: 2.5em;
+        color: #fff;
+    }
+}
+
+.Movement-2{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    
+    .flex-container{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+
+        -webkit-flex-flow: wrap;
+        justify-content: space-around;
+    }
+
+    .flex-item {
+        margin: 0px;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        
+        &:nth-child(1){
+            height: 50vh;
+            width: 67vw;
+            
+            .flex-container{
+                padding: 0;
+                margin: 0;
+                list-style: none;
+
+                display: -webkit-box;
+                display: -moz-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+
+                -webkit-flex-flow: wrap;
+                justify-content: space-around;
+            }
+
+            .flex-item {
+                background: tomato;
+                width: 67vw;
+                margin: 0px;
+
+                line-height: 30px;
+                color: white;
+                text-align: center;
+                
+                &:nth-child(1){
+                    height: 50vh;
+                    background: rgb(0,0,150);
+                    background-size: contain;
+                    padding: 50px;
+                    
+                    #you-shall-not-pass{
+                        position: relative;
+                        top: 0px;
+                        color: #fff;
+                        font-size: 2em;
+                    }
+                    
+                    #movement-paragraph{
+                        position: relative;
+                        top: 10px;
+                        color: #fff;
+                        font-size: 1.3em;
+                        margin: 0px 60px;
+                    }
+                }
+
+                &:nth-child(2){
+                    height: 50vh;
+                    background: url("img/djokovic-large-20.jpg") $nrs 40% 35%;
+                    background-size: cover;
+                }
+            }
+        }
+        
+        &:nth-child(2){
+            height: 100vh;
+            width: 33vw;
+            background: url("img/djokovic-large-08.jpg") $nrs 10% 100%;
+            background-size: cover;
+            
+            #novak-movement{
+                font-size: 1.3em;
+            }
+        }
+    }
+}
+
+.Backhand-1{
+    $backhand-1-height: 100vw * .66666667;
+    
+    position: relative;
+    height: 110vh;
+    background: url("img/djokovic-large-22.jpg") repeat fixed 70% 26%;
+    background-size: 100vw $backhand-1-height;
+    
+    #backhand-video{
+        position: relative;
+        top: 13vh;
+        //left: -30px;
+        display: block;
+        margin: 0 auto;
+        padding: 10px;
+    }
+
+    #backhand-main-header{
+        position: relative;
+        top: 13vh;
+        font-size: 5em;
+        color: #fff;
+    }
+    
+    #backhand-secondary-header{
+        position: relative;
+        top: 7vh;
+        font-size: 2.5em;
+        color: #fff;
+    }
+}
+
+.Backhand-2{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    
+    .flex-container{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+
+        -webkit-flex-flow: wrap;
+        justify-content: space-around;
+    }
+
+    .flex-item {
+        margin: 0px;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        
+        &:nth-child(1){
+            height: 100vh;
+            width: 33vw;
+            background: url("img/djokovic-large-15.jpg") $nrs 30% 50%;
+            background-size: cover;
+        }
+        
+        &:nth-child(2){
+            height: 50vh;
+            width: 67vw;
+            
+            .flex-container{
+                padding: 0;
+                margin: 0;
+                list-style: none;
+
+                display: -webkit-box;
+                display: -moz-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+
+                -webkit-flex-flow: wrap;
+                justify-content: space-around;
+            }
+
+            .flex-item {
+                background: tomato;
+                width: 67vw;
+                margin: 0px;
+
+                line-height: 30px;
+                color: white;
+                font-weight: bold;
+                text-align: center;
+                
+                &:nth-child(1){
+                    height: 50vh;
+                    background: url("img/djokovic-large-21.jpg") $nrs 0% 30%;
+                    background-size: cover;
+                }
+                
+                &:nth-child(2){
+                    height: 50vh;
+                    background: rgb(0,0,150);
+                    background-size: contain;
+                    padding: 50px;
+                    
+                    #power-accuracy{
+                        position: relative;
+                        top: 0px;
+                        color: #fff;
+                        font-size: 2em;
+                    }
+                    
+                    p{
+                        position: relative;
+                        top: 30px;
+                        color: #fff;
+                        font-size: 1.3em;
+                        margin: 0px 60px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.Return-1{
+    $return-1-height: 100vw * .66666667;
+    
+    position: relative;
+    height: 110vh;
+    background: url("img/djokovic-large-23.jpg") repeat fixed 0% 40%;
+    background-size: 100vw;
+    
+    #return-video{
+        position: relative;
+        top: 13vh;
+        //left: -30px;
+        display: block;
+        margin: 0 auto;
+        padding: 10px;
+    }
+
+    #return-main-header{
+        position: relative;
+        top: 13vh;
+        font-size: 5em;
+        color: #fff;
+    }
+    
+    #return-secondary-header{
+        position: relative;
+        top: 7vh;
+        font-size: 2.5em;
+        color: #fff;
+    }
+}
+
+.Return-2{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    
+    .flex-container{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+
+        -webkit-flex-flow: wrap;
+        justify-content: space-around;
+    }
+
+    .flex-item {
+        margin: 0px;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        
+        &:nth-child(1){
+            height: 50vh;
+            width: 67vw;
+            
+            .flex-container{
+                padding: 0;
+                margin: 0;
+                list-style: none;
+
+                display: -webkit-box;
+                display: -moz-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+
+                -webkit-flex-flow: wrap;
+                justify-content: space-around;
+            }
+
+            .flex-item {
+                background: tomato;
+                width: 67vw;
+                margin: 0px;
+
+                line-height: 30px;
+                color: white;
+                font-weight: bold;
+                text-align: center;
+                
+                &:nth-child(1){
+                    height: 50vh;
+                    background: rgb(0,0,150);
+                    background-size: contain;
+                    padding: 50px;
+                    
+                    #return-to-sender{
+                        position: relative;
+                        top: 0px;
+                        color: #fff;
+                        font-size: 2em;
+                    }
+                    
+                    p{
+                        position: relative;
+                        top: 30px;
+                        color: #fff;
+                        font-size: 1.3em;
+                        margin: 0px 60px;
+                    }
+                }
+
+                &:nth-child(2){
+                    height: 50vh;
+                    background: url("img/djokovic-large-24.jpg") $nrs 0% 90%;
+                    background-size: cover;
+                }
+            }
+        }
+        
+        &:nth-child(2){
+            height: 100vh;
+            width: 33vw;
+            background: url("img/djokovic-large-02.jpg") $nrs 50% 90%;
+            background-size: cover;
+            
+            #belgrade-serbia{
+                position: relative;
+                top: 600px;
+                color: #fff;
+                font-size: 2em;         
+            }
+        }
+    }
+}
+
+.Forehand-1{
+    $return-1-height: 100vw * .66666667;
+    
+    position: relative;
+    height: 110vh;
+    background: url("img/djokovic-large-30.jpg") repeat fixed 0% 40%;
+    background-size: 100vw;
+    
+    #forehand-video{
+        position: relative;
+        top: 13vh;
+        //left: -30px;
+        display: block;
+        margin: 0 auto;
+        padding: 10px;
+    }
+
+    #forehand-main-header{
+        position: relative;
+        top: 13vh;
+        font-size: 5em;
+        color: #fff;
+    }
+    
+    #forehand-secondary-header{
+        position: relative;
+        top: 7vh;
+        font-size: 2.5em;
+        color: #fff;
+    }
+}
+
+.Forehand-2{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    
+    .flex-container{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+
+        -webkit-flex-flow: wrap;
+        justify-content: space-around;
+    }
+
+    .flex-item {
+        margin: 0px;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        
+        &:nth-child(1){
+            height: 100vh;
+            width: 33vw;
+            background: url("img/djokovic-large-28.jpg") $nrs 70% 90%;
+            background-size: cover;
+        }
+        
+        &:nth-child(2){
+            height: 50vh;
+            width: 67vw;
+            
+            .flex-container{
+                padding: 0;
+                margin: 0;
+                list-style: none;
+
+                display: -webkit-box;
+                display: -moz-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+
+                -webkit-flex-flow: wrap;
+                justify-content: space-around;
+            }
+
+            .flex-item {
+                background: tomato;
+                width: 67vw;
+                margin: 0px;
+
+                line-height: 30px;
+                color: white;
+                font-weight: bold;
+                text-align: center;
+                
+                &:nth-child(1){
+                    height: 50vh;
+                    background: url("img/djokovic-large-29.jpg") $nrs 0% 35%;
+                    background-size: cover;
+                }
+                
+                &:nth-child(2){
+                    height: 50vh;
+                    background: rgb(0,0,150);
+                    background-size: contain;
+                    padding: 50px;
+                    
+                    #the-ultimate-weakness{
+                        position: relative;
+                        top: 0px;
+                        color: #fff;
+                        font-size: 2em;
+                    }
+                    
+                    p{
+                        position: relative;
+                        top: 30px;
+                        color: #fff;
+                        font-size: 1.3em;
+                        margin: 0px 60px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
