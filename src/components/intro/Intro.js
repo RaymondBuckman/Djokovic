@@ -49,6 +49,5 @@ export default class Intro extends Component {
     // access to player in all event handlers via event.target 
     event.target.playVideo();
   }
-    
-    
 }
+

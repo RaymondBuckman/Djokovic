@@ -42,6 +42,5 @@ export default class Serve extends Component {
             </div>
         </div>
         );
-    }
-    
+    }   
 }

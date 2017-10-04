@@ -42,6 +42,5 @@ export default class Grit extends Component {
             </div>
         </div>
         );
-    }
-    
+    }   
 }
