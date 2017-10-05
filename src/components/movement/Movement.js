@@ -22,7 +22,7 @@ export default class Movement extends Component {
                     <div className="row">
                         <YouTube videoId="VUiBA7ivzCU" opts={opts} id="movement-video" className="video-fade-in" onReady={this._onReady}/>   
                         <h1 id="movement-main-header" className="text-center">Movement</h1>
-                        <h2 id="movement-secondary-header" className="text-center">The Wall</h2>
+                        <h2 id="movement-secondary-header" className="text-center">The wall</h2>
                     </div>
                 </div>
             </div>

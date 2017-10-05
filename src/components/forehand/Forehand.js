@@ -22,7 +22,7 @@ export default class Forehand extends Component {
                     <div className="row">
                         <YouTube videoId="C_kvfS1Jafg" opts={opts} id="forehand-video" className="video-fade-in" onReady={this._onReady}/>   
                         <h1 id="forehand-main-header" className="text-center">Forehand</h1>
-                        <h2 id="forehand-secondary-header" className="text-center">The Ultimate "Weakness"</h2>
+                        <h2 id="forehand-secondary-header" className="text-center">The ultimate "weakness"</h2>
                     </div>
                 </div>
             </div>

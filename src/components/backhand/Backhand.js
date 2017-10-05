@@ -22,7 +22,7 @@ export default class Backhand extends Component {
                     <div className="row">
                         <YouTube videoId="PVRJgHewyFY" opts={opts} id="backhand-video" className="video-fade-in" onReady={this._onReady}/>   
                         <h1 id="backhand-main-header" className="text-center">Backhand</h1>
-                        <h2 id="backhand-secondary-header" className="text-center">Approach At Your Own Peril</h2>
+                        <h2 id="backhand-secondary-header" className="text-center">Approach at your own peril</h2>
                     </div>
                 </div>
             </div>

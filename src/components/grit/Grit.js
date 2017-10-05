@@ -22,7 +22,7 @@ export default class Grit extends Component {
                     <div className="row">
                         <YouTube videoId="ghRMOORLZKU" opts={opts} id="grit-video" className="video-fade-in" onReady={this._onReady}/>   
                         <h1 id="grit-main-header" className="text-center">Grit</h1>
-                        <h2 id="grit-secondary-header" className="text-center">Never Give Up</h2>
+                        <h2 id="grit-secondary-header" className="text-center">Never give up</h2>
                     </div>
                 </div>
             </div>
