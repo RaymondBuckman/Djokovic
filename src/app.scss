@@ -7,9 +7,10 @@ $secondary-font: "Open Sans Condensed";
 $nrf: no-repeat fixed;
 $nrs: no-repeat scroll;
 
-$main-color: #414445;
-$secondary-color: #fff;
-$tertiary-color: #369ac2;
+//Exact Serbian flag colors
+$red: #c6363c;
+$blue: #0c4076;
+$white: #fff;
 
 $arrow-rotate-out: all 2.0s cubic-bezier(.37,1.01,.8,.99);
 $color-hover: color 0.3s ease-in-out;
@@ -33,16 +34,6 @@ $eleven-height: 100vw * .7492; //Multiple based on image proportions
 @keyframes occasional-brightness{
     20%, 30%	{-webkit-filter: brightness(100%); -moz-filter: brightness(100%);}
 	25%		    {-webkit-filter: brightness(110%); -moz-filter: brightness(110%);}
-}
-
-@keyframes colorSwitch{
-    0%, 40% {color: $secondary-color; background-color: $tertiary-color;}
-    50%, 90% {color: $main-color; background-color: $secondary-color;}
-}
-
-@keyframes borderColorSwitch{
-    0%, 40% {border-bottom-color: $tertiary-color;}
-    50%, 90% {border-bottom-color: $main-color;}
 }
 
 @keyframes moveArrows{
@@ -160,7 +151,6 @@ time, mark, audio, video {
 }
 
 body {
-    background: $main-color;
     width: 100vw;
     margin: 0;
     padding: 0;
@@ -237,14 +227,14 @@ h2, p{
         position: relative;
         top: 13vh;
         font-size: 5em;
-        color: #fff;
+        color: $white;
     }
     
     #intro-secondary-header{
         position: relative;
         top: 7vh;
         font-size: 2.5em;
-        color: #fff;
+        color: $white;
     }
 }
 
@@ -270,7 +260,6 @@ h2, p{
 
     .flex-item {
         margin: 0px;
-        color: white;
         font-weight: bold;
         text-align: center;
         
@@ -308,12 +297,10 @@ h2, p{
             }
 
             .flex-item {
-                background: tomato;
                 width: 67vw;
                 margin: 0px;
 
                 line-height: 30px;
-                color: white;
                 font-weight: bold;
                 text-align: center;
 
@@ -325,21 +312,21 @@ h2, p{
 
                 &:nth-child(2){
                     height: 50vh;
-                    background: rgb(0,0,150);
+                    background: $blue;
                     background-size: contain;
                     padding: 50px;
                     
                     #the-origin-of-a-champion{
                         position: relative;
                         top: 0px;
-                        color: #fff;
+                        color: $white;
                         font-size: 2em;
                     }
                     
                     p{
                         position: relative;
                         top: 30px;
-                        color: #fff;
+                        color: $white;
                         font-size: 1.3em;
                         margin: 0px 60px;
                     }
@@ -576,7 +563,7 @@ h2, p{
                 
                 &:nth-child(1){
                     height: 50vh;
-                    background: rgb(0,0,150);
+                    background: $blue;
                     background-size: contain;
                     padding: 50px;
                     
@@ -719,7 +706,7 @@ h2, p{
                 
                 &:nth-child(2){
                     height: 50vh;
-                    background: rgb(0,0,150);
+                    background: $blue;
                     background-size: contain;
                     padding: 50px;
                     
@@ -832,7 +819,7 @@ h2, p{
                 
                 &:nth-child(1){
                     height: 50vh;
-                    background: rgb(0,0,150);
+                    background: $blue;
                     background-size: contain;
                     padding: 50px;
                     
@@ -971,7 +958,7 @@ h2, p{
                 
                 &:nth-child(2){
                     height: 50vh;
-                    background: rgb(0,0,150);
+                    background: $blue;
                     background-size: contain;
                     padding: 50px;
                     
@@ -1084,7 +1071,7 @@ h2, p{
                 
                 &:nth-child(1){
                     height: 50vh;
-                    background: rgb(0,0,150);
+                    background: $blue;
                     background-size: contain;
                     padding: 50px;
                     
@@ -1122,10 +1109,12 @@ h2, p{
 }
 
 .Grit-1{
+    
+    $grit-1-height: 100vw * .66659;
     position: relative;
     height: 110vh;
     background: url("img/djokovic-large-26.jpg") repeat fixed 0% 0%;
-    background-size: 100vw;
+    background-size: 100vw $grit-1-height;
     
     #grit-video{
         position: relative;
@@ -1221,7 +1210,7 @@ h2, p{
                 
                 &:nth-child(2){
                     height: 50vh;
-                    background: rgb(0,0,150);
+                    background: $blue;
                     background-size: contain;
                     padding: 50px;
                     
@@ -1244,4 +1233,286 @@ h2, p{
         }
     }
 }
+
+.Coach-1{
+    $return-1-height: 100vw * .66666667;
+    
+    position: relative;
+    height: 110vh;
+    background: url("img/camp-01.jpg") repeat fixed 0% 20%;
+    background-size: 100vw;
+
+    #coach-main-header{
+        position: relative;
+        top: 60vh;
+        font-size: 5em;
+        color: #fff;
+    }
+    
+    #coach-secondary-header{
+        position: relative;
+        top: 53vh;
+        font-size: 2.5em;
+        color: #fff;
+    }
+}
+
+.Coach-2{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    
+    .flex-container{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+
+        -webkit-flex-flow: wrap;
+        justify-content: space-around;
+    }
+
+    .flex-item {
+        margin: 0px;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        
+        &:nth-child(1){
+            height: 50vh;
+            width: 67vw;
+            
+            .flex-container{
+                padding: 0;
+                margin: 0;
+                list-style: none;
+
+                display: -webkit-box;
+                display: -moz-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+
+                -webkit-flex-flow: wrap;
+                justify-content: space-around;
+            }
+
+            .flex-item {
+                background: tomato;
+                width: 67vw;
+                margin: 0px;
+
+                line-height: 30px;
+                color: white;
+                font-weight: bold;
+                text-align: center;
+                
+                &:nth-child(1){
+                    height: 50vh;
+                    background: $blue;
+                    background-size: contain;
+                    padding: 50px;
+                    
+                    #support-network{
+                        position: relative;
+                        top: 0px;
+                        color: #fff;
+                        font-size: 2em;
+                    }
+                    
+                    #coach-paragraph{
+                        position: relative;
+                        top: 30px;
+                        color: #fff;
+                        font-size: 1.3em;
+                        margin: 0px 60px;
+                    }
+                }
+
+                &:nth-child(2){
+                    height: 50vh;
+                    background: url("img/camp-09.jpg") $nrs 0% 10%;
+                    background-size: cover;
+                }
+            }
+        }
+        
+        &:nth-child(2){
+            height: 100vh;
+            width: 33vw;
+            background: url("img/camp-03.jpg") $nrs 60% 95%;
+            background-size: cover;
+        }
+    }
+}
+
+.Gear-1 {
+    position: relative;
+    height: auto;
+    width: 100vw;
+    background: url("./img/black-wallpaper-01.jpg") $nrf center;
+    background-size: cover;
+        
+    .flex-container {
+          padding: 5vh 5vw;
+          margin: 0;
+          list-style: none;
+
+          display: -webkit-box;
+          display: -moz-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          display: flex;
+
+          -webkit-flex-flow: row wrap;
+          justify-content: space-around;
+        }
+
+    .flex-item {
+        //padding: 5px;
+        width: 290px;
+        height: 490px;
+        margin-top: 10px;
+        color: white;
+        text-align: center;
+        filter: grayscale(30%);
+        
+        h2{
+            font-size: 1.5em
+        }
+        
+        &:nth-child(1){
+            width: 100vw;
+            height: 100px;
+            background: transparent;
+            
+            #gear{
+                position: relative;
+                top: -10px;
+                color: #fff;
+                @include main-font;
+                font-size: 3.5em;
+            }
+        }
+        
+        &:nth-child(2){
+            width: 20vw;
+            height: 430px;
+            background: url("img/head-racquet-01.jpg") $nrs 50% 80%;
+            background-size: 500px;
+            transition: all 0.3s ease-in-out;
+            
+            #racket-titles{
+                position: relative;
+                top: 350px;
+                color: $blue;
+            }
+            
+            &:hover{
+                background-size: 600px; 
+                filter: grayscale(0%);
+            }
+        }
+        
+        &:nth-child(3){
+            width: 20vw;
+            height: 430px;
+            background: url("img/uniqlo-01.jpg") $nrs 50% 50%;
+            background-size: 700px;
+            transition: all 0.3s ease-in-out;
+            
+            #apparel-titles{
+                position: relative;
+                top: 350px;
+            }
+            
+            &:hover{
+                background-size: 900px;
+                filter: grayscale(0%);
+            }
+        }
+        
+        &:nth-child(4){
+            width: 20vw;
+            height: 430px;
+            background: url("img/adidas-01.jpg") $nrs 50% 100%;
+            background-size: 500px;
+            transition: all 0.3s ease-in-out;
+            
+            #shoes-titles{
+                position: relative;
+                top: 350px;
+                color: $blue;
+            }
+            
+            &:hover{
+                background-size: 700px;
+                filter: grayscale(0%);
+            }   
+            
+        }
+        
+        &:nth-child(5){
+            width: 20vw;
+            height: 430px;
+            background: url("img/lacoste-01.jpg") $nrs 50% 50%;
+            background-size: 800px;
+            transition: all 0.3s ease-in-out;
+            
+            #etc-titles{
+                position: relative;
+                top: 350px;
+                color: $blue;
+            }
+            
+            &:hover{
+               background-size: 900px; 
+            }
+        }
+        
+        &:nth-child(6){
+            width: 80vw;
+            height: 150px;
+            background: transparent;
+            
+            li{
+                color: #fff;
+                @include secondary-font;
+                font-size: 1.7em;
+                list-style: none;
+                
+            }
+        }
+    }
+}
+
+
+.End-1{
+    $end-1-height: 100vw * 0.65001;
+    
+    position: relative;
+    height: 100vh;
+    background: url("img/djokovic-large-45.jpg") repeat fixed 50% 10%;
+    background-size: 100vw $end-1-height;
+
+    #end-main-header{
+        position: relative;
+        top: 60vh;
+        font-size: 5em;
+        color: $white;
+    }
+    
+    #end-secondary-header{
+        position: relative;
+        top: 53vh;
+        font-size: 2.5em;
+        color: $white;
+    }
+}
+
 
