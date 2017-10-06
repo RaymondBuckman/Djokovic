@@ -250,25 +250,33 @@ $(document).ready(function(){
         var tilt23 = document.getElementById("return-secondary-header");
         var tilt24 = document.getElementById("return-to-sender");
         var tilt25 = document.getElementById("return-paragraph");
-        var tilt21 = document.getElementById("forehand-video");
-        var tilt22 = document.getElementById("forehand-main-header");
-        var tilt23 = document.getElementById("forehand-secondary-header");
-        var tilt24 = document.getElementById("attack-his-what");
-        var tilt25 = document.getElementById("forehand-paragraph");
-        var tilt26 = document.getElementById("serve-video");
-        var tilt27 = document.getElementById("serve-main-header");
-        var tilt28 = document.getElementById("serve-secondary-header");
-        var tilt29 = document.getElementById("the-straw");
-        var tilt30 = document.getElementById("serve-paragraph");
-        var tilt31 = document.getElementById("grit-video");
-        var tilt32 = document.getElementById("grit-main-header");
-        var tilt33 = document.getElementById("grit-secondary-header");
-        var tilt34 = document.getElementById("down-but-not-out");
-        var tilt35 = document.getElementById("grit-paragraph");
-        var tilt36 = document.getElementById("coach-main-header");
-        var tilt37 = document.getElementById("coach-secondary-header");
-        var tilt38 = document.getElementById("support-network");
-        var tilt39 = document.getElementById("coach-paragraph");
+        var tilt26 = document.getElementById("forehand-video");
+        var tilt27 = document.getElementById("forehand-main-header");
+        var tilt28 = document.getElementById("forehand-secondary-header");
+        var tilt29 = document.getElementById("attack-his-what");
+        var tilt30 = document.getElementById("forehand-paragraph");
+        var tilt31 = document.getElementById("serve-video");
+        var tilt32 = document.getElementById("serve-main-header");
+        var tilt33 = document.getElementById("serve-secondary-header");
+        var tilt34 = document.getElementById("the-straw");
+        var tilt35 = document.getElementById("serve-paragraph");
+        var tilt36 = document.getElementById("grit-video");
+        var tilt37 = document.getElementById("grit-main-header");
+        var tilt38 = document.getElementById("grit-secondary-header");
+        var tilt39 = document.getElementById("down-but-not-out");
+        var tilt40 = document.getElementById("grit-paragraph");
+        var tilt41 = document.getElementById("coach-main-header");
+        var tilt42 = document.getElementById("coach-secondary-header");
+        var tilt43 = document.getElementById("support-network");
+        var tilt44 = document.getElementById("coach-paragraph");
+        var tilt45 = document.getElementById("gear");
+        var tilt46 = document.getElementById("racket-header");
+        var tilt47 = document.getElementById("past-apparel-header");
+        var tilt48 = document.getElementById("shoes-header");
+        var tilt49 = document.getElementById("current-apparel-header");
+        var tilt50 = document.getElementById("other-sponsors-list");
+        var tilt51 = document.getElementById("end-main-header");
+        var tilt52 = document.getElementById("end-secondary-header");
         
         
         
@@ -293,7 +301,7 @@ $(document).ready(function(){
         tilt18.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
         tilt19.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
         tilt20.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
-        
+         
         tilt22.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
         tilt23.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
         tilt24.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
@@ -308,10 +316,23 @@ $(document).ready(function(){
         tilt33.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
         tilt34.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
         tilt35.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
-        tilt36.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
+        
         tilt37.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
         tilt38.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
         tilt39.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
+        tilt40.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
+        tilt41.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
+        tilt42.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
+        tilt43.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
+        tilt44.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
+        tilt45.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
+        tilt46.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
+        tilt47.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
+        tilt48.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
+        tilt49.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
+        tilt50.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
+        tilt51.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
+        tilt52.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
     }
 
     document.addEventListener("mousemove", function (event)
