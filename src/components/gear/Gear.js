@@ -8,12 +8,12 @@ export default class Gear extends Component {
             <div className="Gear-1">
                 <ul className="flex-container">
                     <li className="flex-item"><h1 id="gear">Gear</h1></li>
-                    <li className="flex-item" id="racket-titles-flexbox"><h2 id="racket-titles">Head Graphene Touch Speed Pro</h2></li>
-                    <li className="flex-item" id="apparel-titles-flexbox"><h2 id="apparel-titles">Uniqlo<br/>Past Sponsor</h2></li>
-                    <li className="flex-item" id="shoes-titles-flexbox"><h2 id="shoes-titles">Adidas Novak Pro</h2></li>
-                    <li className="flex-item" id="etc-titles-flexbox"><h2 id="etc-titles">Lacoste<br/>Current Sponsor</h2></li>
+                    <li className="flex-item" id="racket-flexbox"><h2 id="racket-header">Head Graphene Touch Speed Pro</h2></li>
+                    <li className="flex-item" id="past-apparel-flexbox"><h2 id="past-apparel-header">Uniqlo<br/>Past Sponsor</h2></li>
+                    <li className="flex-item" id="shoes-flexbox"><h2 id="shoes-header">Adidas Novak Pro</h2></li>
+                    <li className="flex-item" id="current-apparel-flexbox"><h2 id="current-apparel-header">Lacoste<br/>Current Sponsor</h2></li>
                     <li className="flex-item">
-                        <ul id="other-sponsers-list">
+                        <ul id="other-sponsors-list">
                             <li>Peugeot</li>
                             <li>Seiko</li>
                             <li>Jacob's Creek</li> 
