@@ -1407,7 +1407,7 @@ h2, p{
             background-size: 500px;
             transition: all 0.3s ease-in-out;
             
-            #racket-titles{
+            #racket-header{
                 position: relative;
                 top: 350px;
                 color: $blue;
@@ -1426,7 +1426,7 @@ h2, p{
             background-size: 700px;
             transition: all 0.3s ease-in-out;
             
-            #apparel-titles{
+            #past-apparel-header{
                 position: relative;
                 top: 350px;
             }
@@ -1444,7 +1444,7 @@ h2, p{
             background-size: 500px;
             transition: all 0.3s ease-in-out;
             
-            #shoes-titles{
+            #shoes-header{
                 position: relative;
                 top: 350px;
                 color: $blue;
@@ -1464,7 +1464,7 @@ h2, p{
             background-size: 800px;
             transition: all 0.3s ease-in-out;
             
-            #etc-titles{
+            #current-apparel-header{
                 position: relative;
                 top: 350px;
                 color: $blue;
