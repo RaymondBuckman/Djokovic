@@ -8,6 +8,7 @@ import ReactTooltip from 'react-tooltip';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Sidebar from './components/sidebar/Sidebar';
 import Intro from './components/intro/Intro';
 import Titles from './components/titles/Titles';
 import Movement from './components/movement/Movement';
@@ -27,26 +28,53 @@ import $ from "jquery";
 
 ReactDOM.render(
     <div className="App" id="app">
-        
-        <a href="#top-of-page"><img id="hamburger" src={hamburger} height="40px" width="40px"></img></a>
-        <a href="#top-of-page"><img id="djokovic-logo" src={djokovicLogo} height="70px" width="70px"></img></a>
-        <Intro />
-        <Titles />
-        <Movement />
-        <Backhand />
-        <Return />  
-        <Forehand />
-        <Serve />
-        <Grit />
-        <Coach />
-        <Gear />
-        <End />
+        <div id="wrapper">
+            <div id="sidebar-wrapper">
+                <Sidebar />
+            </div>
+            <img id="hamburger" src={hamburger} height="40px" width="40px"></img>
+            <div id="main-content-wrapper">                
+                <a href="#top-of-page"><img id="djokovic-logo" src={djokovicLogo} height="70px" width="70px"></img></a>
+                <Intro />
+                <Titles />
+                <Movement />
+                <Backhand />
+                <Return />  
+                <Forehand />
+                <Serve />
+                <Grit />
+                <Coach />
+                <Gear />
+                <End />
+            </div>
+        </div>
     </div>,
     document.getElementById('root')
 );
 
 
 $(document).ready(function(){ 
+    var menuRotate = 0;
+
+     $('#main-content-wrapper, #close').click(function(){
+          $('#wrapper').removeClass('menuDisplayed');
+          $('#main-content-wrapper *').removeClass('disabled');
+          $('#close').css({
+               'opacity' : "0",
+               'transform' : 'translateX(0px)',
+               'transform' : 'rotateY(90deg)'
+          });
+     });
+
+     $('#hamburger').click(function(){
+          $('#wrapper').addClass('menuDisplayed');
+          $('#main-content-wrapper *').addClass('disabled');
+          $('#close').css({
+               'transform' : 'translateX(30px)',
+               'opacity' : '1'
+          });
+    });
+      
     var controller = new ScrollMagic.Controller();    
     
     var intro1ParallaxTween = TweenMax.to(".Intro-1", 1, {
