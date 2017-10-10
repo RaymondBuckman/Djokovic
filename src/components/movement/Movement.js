@@ -17,7 +17,7 @@ export default class Movement extends Component {
     }
         return(
         <div>
-            <div className="Movement-1">
+            <div className="Movement-1" id="movement-section">
                 <div className="container-fluid">
                     <div className="row">
                         <YouTube videoId="VUiBA7ivzCU" opts={opts} id="movement-video" className="video-fade-in" onReady={this._onReady}/>   
