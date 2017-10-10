@@ -17,7 +17,7 @@ export default class Serve extends Component {
     }
         return(
         <div>
-            <div className="Serve-1">
+            <div className="Serve-1" id="serve-section">
                 <div className="container-fluid">
                     <div className="row">
                         <YouTube videoId="_HvKoOmMDYg" opts={opts} id="serve-video" className="video-fade-in" onReady={this._onReady}/>   

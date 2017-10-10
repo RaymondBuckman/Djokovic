@@ -5,7 +5,7 @@ export default class Titles extends Component {
     render() {
         return(
         <div>
-            <div className="Titles-1">
+            <div className="Titles-1" id="titles-section">
                 <ul className="flex-container">
                     <li className="flex-item"><h1 id="titles">Titles</h1></li>
                     <li className="flex-item" id="ao-titles-flexbox"><h2 id="ao-titles">6 Australian Open Titles</h2></li>

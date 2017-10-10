@@ -17,7 +17,7 @@ export default class Forehand extends Component {
     }
         return(
         <div>
-            <div className="Forehand-1">
+            <div className="Forehand-1" id="forehand-section">
                 <div className="container-fluid">
                     <div className="row">
                         <YouTube videoId="C_kvfS1Jafg" opts={opts} id="forehand-video" className="video-fade-in" onReady={this._onReady}/>   

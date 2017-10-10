@@ -59,6 +59,10 @@ $eleven-height: 100vw * .7492; //Multiple based on image proportions
     transition: transform 500ms ease-in-out;
 }
 
+@mixin complex-transform{
+    transform: scale(1.4) translateX(30px) rotateY(30deg) rotateZ(3deg);
+}
+
 @mixin nav-color-change{
     border-radius: 20px;
     transition: all 0.3s ease-in;
@@ -73,6 +77,14 @@ $eleven-height: 100vw * .7492; //Multiple based on image proportions
 @mixin occasional-brightness{
     animation: occasional-brightness 8s infinite;
 }
+
+@mixin sidebar-transition{
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
 
 @mixin global-padding{
     padding: 0 10vw;
@@ -171,8 +183,149 @@ h2, p{
 .App{
     position: relative;
     width: 100%;
-    background: url("img/grid.jpg") $nrf 50% 50%;
+    background: url("./img/black-wallpaper-01.jpg") $nrf center;
     background-size: cover;
+}
+
+/*=============== SIDEBAR ===============*/
+#sidebar-wrapper{
+	z-index: 51;
+	position: fixed;
+	width: 0;
+	height: 100%;
+	overflow-x: hidden;
+	background: url("./img/black-wallpaper-01.jpg") $nrf center;
+    background-size: cover;
+    //opacity: 0.9;
+	@include sidebar-transition;
+    -webkit-clip-path: polygon(46% 0, 100% 100%, 38% 100%, 0% 100%, 0 51%, 0% 0%);
+    clip-path: polygon(46% 0, 100% 100%, 38% 100%, 0% 100%, 0 51%, 0% 0%);
+}
+
+#main-content-wrapper{
+    height: 100%;
+	position: relative;
+	overflow-x: hidden;
+	@include sidebar-transition;
+}
+
+.disabled {
+    pointer-events: none;
+}
+
+#sidebar-wrapper{
+    left: -300px;
+    width: 300px;
+}
+
+
+#wrapper.menuDisplayed #sidebar-wrapper{
+	left: 0px;
+    z-index: 99;
+}
+
+#wrapper.menuDisplayed #main-content-wrapper{
+	//padding-left: 250px;
+    opacity: 0.1; /*darkens page-content-wrapper when sidebar is active*/
+}
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: inline-block;
+    z-index: 99;
+    
+    li {
+        position: relative;
+        line-height: 22px;
+        display: inline-block;
+        width: 100%;
+    }
+}
+
+#coat-of-arms{
+    position: relative;
+    top: 10px;
+    //left: 75px;
+	background: url("img/coat-of-arms-02.png") $nrs 20% 50%;
+	background-size: contain;
+	border: transparent;
+	width: 120%;
+	height: 150px;
+	margin-bottom: 15px;
+	transition: border 0.5s ease-in-out;
+    
+    &:hover{
+        border-color: $white;
+    }
+}
+
+#back-to-content{
+    position: fixed;
+    top: 50%;
+    color: $white;
+    font-size: 3em;
+    @include main-font;
+    
+}
+
+#profile-image{
+    position:absolute;
+    bottom: 0px;
+    background: url("img/atp-player-image-01.png") $nrs 50% 0%;
+	background-size: cover;
+	width: 100%;
+	height: 350px;
+    //opacity: 0.8;
+	transition: border 0.5s ease-in-out;
+}
+
+.sidebar-nav li a{
+    display: block;
+    color: $white;
+    @include main-font;
+    font-size: 1em;
+    text-decoration: none;
+    padding: 10px 15px 10px 30px;
+    transition: all .5s ease;
+    
+    .brackets{
+        opacity: 0;
+    }
+}
+
+
+
+.sidebar-nav li{
+    a:first-letter{
+        font-size: 1.3em;
+        letter-spacing: 5px;
+    }
+    
+    &:nth-child(3n-1) a:first-letter{
+            color: $red;
+    }
+    
+    &:nth-child(3n) a:first-letter{
+            color: $blue;
+    }
+}
+
+.sidebar-nav  li:nth-child(n) a:hover,
+.sidebar-nav  li:nth-child(n) a:active,
+.sidebar-nav  li:nth-child(n) a:focus,
+.sidebar-nav  li:nth-child(n).open a:hover,
+.sidebar-nav  li:nth-child(n).open a:active,
+.sidebar-nav  li:nth-child(n).open a:focus{
+    @include complex-transform;
+}
+
+.sidebar-nav  li:nth-child(n) a:hover .brackets *{
+    opacity: 1;
 }
 
 #hamburger{
@@ -182,7 +335,7 @@ h2, p{
     display: inline-block;
     opacity: 0.5;
     transition: all 0.3s ease-in;
-    z-index: 99;
+    z-index: 98;
     
     &:hover{
         opacity: 1;
@@ -1407,7 +1560,7 @@ h2, p{
             background-size: 500px;
             transition: all 0.3s ease-in-out;
             
-            #racket-titles{
+            #racket-header{
                 position: relative;
                 top: 350px;
                 color: $blue;
@@ -1426,7 +1579,7 @@ h2, p{
             background-size: 700px;
             transition: all 0.3s ease-in-out;
             
-            #apparel-titles{
+            #past-apparel-header{
                 position: relative;
                 top: 350px;
             }
@@ -1444,7 +1597,7 @@ h2, p{
             background-size: 500px;
             transition: all 0.3s ease-in-out;
             
-            #shoes-titles{
+            #shoes-header{
                 position: relative;
                 top: 350px;
                 color: $blue;
@@ -1464,7 +1617,7 @@ h2, p{
             background-size: 800px;
             transition: all 0.3s ease-in-out;
             
-            #etc-titles{
+            #current-apparel-header{
                 position: relative;
                 top: 350px;
                 color: $blue;
