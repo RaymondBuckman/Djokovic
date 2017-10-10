@@ -5,7 +5,7 @@ export default class Gear extends Component {
     render() {
         return(
         <div>
-            <div className="Gear-1">
+            <div className="Gear-1" id="gear-section">
                 <ul className="flex-container">
                     <li className="flex-item"><h1 id="gear">Gear</h1></li>
                     <li className="flex-item" id="racket-flexbox"><h2 id="racket-header">Head Graphene Touch Speed Pro</h2></li>
