@@ -7,7 +7,7 @@ export default class Coach extends Component {
         return(
         <div>
             <div className="Coach-1">
-                <div className="container-fluid">
+                <div className="container-fluid" id="coach-section">
                     <div className="row">
                         <h1 id="coach-main-header" className="text-center">Coaching Staff</h1>
                         <h2 id="coach-secondary-header" className="text-center">The team behind the sensation</h2>
