@@ -17,7 +17,7 @@ export default class Backhand extends Component {
     }
         return(
         <div>
-            <div className="Backhand-1">
+            <div className="Backhand-1" id="backhand-section">
                 <div className="container-fluid">
                     <div className="row">
                         <YouTube videoId="PVRJgHewyFY" opts={opts} id="backhand-video" className="video-fade-in" onReady={this._onReady}/>   
