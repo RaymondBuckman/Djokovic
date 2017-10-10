@@ -17,7 +17,7 @@ export default class Grit extends Component {
     }
         return(
         <div>
-            <div className="Grit-1">
+            <div className="Grit-1" id="grit-section">
                 <div className="container-fluid">
                     <div className="row">
                         <YouTube videoId="ghRMOORLZKU" opts={opts} id="grit-video" className="video-fade-in" onReady={this._onReady}/>   
