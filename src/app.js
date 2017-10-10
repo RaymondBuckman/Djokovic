@@ -306,8 +306,7 @@ $(document).ready(function(){
         var tilt50 = document.getElementById("other-sponsors-list");
         var tilt51 = document.getElementById("end-main-header");
         var tilt52 = document.getElementById("end-secondary-header");
-        var tilt53 = document.getElementById("back-to-content");
-        
+        var tilt53 = document.getElementById("back-to-content");        
         
         
         tilt0.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
@@ -364,6 +363,7 @@ $(document).ready(function(){
         tilt51.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
         tilt52.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
         tilt53.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
+
     }
 
     document.addEventListener("mousemove", function (event)
