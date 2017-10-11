@@ -299,14 +299,17 @@ $(document).ready(function(){
         var tilt43 = document.getElementById("support-network");
         var tilt44 = document.getElementById("coach-paragraph");
         var tilt45 = document.getElementById("gear");
-        var tilt46 = document.getElementById("racket-header");
-        var tilt47 = document.getElementById("past-apparel-header");
-        var tilt48 = document.getElementById("shoes-header");
-        var tilt49 = document.getElementById("current-apparel-header");
-        var tilt50 = document.getElementById("other-sponsors-list");
-        var tilt51 = document.getElementById("end-main-header");
-        var tilt52 = document.getElementById("end-secondary-header");
-        var tilt53 = document.getElementById("back-to-content");        
+        var tilt46 = document.getElementById("head-header");
+        var tilt47 = document.getElementById("uniqlo-header");
+        var tilt48 = document.getElementById("adidas-header");
+        var tilt49 = document.getElementById("lacoste-header");
+        var tilt50 = document.getElementById("peugeot-header");
+        var tilt51 = document.getElementById("seiko-header");
+        var tilt52 = document.getElementById("jacob-header");
+        var tilt53 = document.getElementById("anz-header"); 
+        var tilt54 = document.getElementById("end-main-header");
+        var tilt55 = document.getElementById("end-secondary-header");
+        var tilt56 = document.getElementById("back-to-content");        
         
         
         tilt0.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
@@ -363,6 +366,9 @@ $(document).ready(function(){
         tilt51.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
         tilt52.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
         tilt53.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
+        tilt54.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
+        tilt55.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
+        tilt56.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
 
     }
 

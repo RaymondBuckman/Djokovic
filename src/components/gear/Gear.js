@@ -7,19 +7,15 @@ export default class Gear extends Component {
         <div>
             <div className="Gear-1" id="gear-section">
                 <ul className="flex-container">
-                    <li className="flex-item"><h1 id="gear">Gear</h1></li>
-                    <li className="flex-item" id="racket-flexbox"><h2 id="racket-header">Head Graphene Touch Speed Pro</h2></li>
-                    <li className="flex-item" id="past-apparel-flexbox"><h2 id="past-apparel-header">Uniqlo<br/>Past Sponsor</h2></li>
-                    <li className="flex-item" id="shoes-flexbox"><h2 id="shoes-header">Adidas Novak Pro</h2></li>
-                    <li className="flex-item" id="current-apparel-flexbox"><h2 id="current-apparel-header">Lacoste<br/>Current Sponsor</h2></li>
-                    <li className="flex-item">
-                        <ul id="other-sponsors-list">
-                            <li>Peugeot</li>
-                            <li>Seiko</li>
-                            <li>Jacob's Creek</li> 
-                            <li>ANZ</li>
-                        </ul>
-                    </li>
+                    <li className="flex-item"><h1 id="gear">Gear & Sponsors</h1></li>
+                    <li className="flex-item" id="head-flexbox"><h1 id="head-header">Head</h1></li>
+                    <li className="flex-item" id="uniqlo-flexbox"><h1 id="uniqlo-header">Uniqlo<br/>Former Sponsor</h1></li>
+                    <li className="flex-item" id="adidas-flexbox"><h1 id="adidas-header">Adidas</h1></li>
+                    <li className="flex-item" id="lacoste-flexbox"><h1 id="lacoste-header">Lacoste<br/>Current Sponsor</h1></li>
+                    <li className="flex-item" id="peugeot-flexbox"><h1 id="peugeot-header">Peugeot</h1></li>
+                    <li className="flex-item" id="seiko-flexbox"><h1 id="seiko-header">Seiko</h1></li>
+                    <li className="flex-item" id="jacob-flexbox"><h1 id="jacob-header">Jacob's Creek</h1></li>
+                    <li className="flex-item" id="anz-flexbox"><h1 id="anz-header">ANZ</h1></li>
                 </ul>
             </div>
         </div>
