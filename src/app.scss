@@ -12,6 +12,11 @@ $red: #c6363c;
 $blue: #0c4076;
 $white: #fff;
 
+//header sizes
+$large-header: 5em;
+$medium-header: 2.5em;
+$small-header: 2em;
+
 $arrow-rotate-out: all 2.0s cubic-bezier(.37,1.01,.8,.99);
 $color-hover: color 0.3s ease-in-out;
 
@@ -180,6 +185,10 @@ h2, p{
     @include secondary-font;
 }
 
+li{
+    list-style: none;
+}
+
 .App{
     position: relative;
     width: 100%;
@@ -254,8 +263,8 @@ h2, p{
 	background: url("img/coat-of-arms-02.png") $nrs 20% 50%;
 	background-size: contain;
 	border: transparent;
-	width: 120%;
-	height: 150px;
+	width: 100%;
+	height: 120px;
 	margin-bottom: 15px;
 	transition: border 0.5s ease-in-out;
     
@@ -380,14 +389,14 @@ h2, p{
     #intro-main-header{
         position: relative;
         top: 13vh;
-        font-size: 5em;
+        font-size: $large-header;
         color: $white;
     }
     
     #intro-secondary-header{
         position: relative;
         top: 7vh;
-        font-size: 2.5em;
+        font-size: $medium-header;
         color: $white;
     }
 }
@@ -427,7 +436,7 @@ h2, p{
                 position: relative;
                 top: 600px;
                 color: #fff;
-                font-size: 2em;         
+                font-size: $small-header;        
             }
         }
         
@@ -474,7 +483,7 @@ h2, p{
                         position: relative;
                         top: 0px;
                         color: $white;
-                        font-size: 2em;
+                        font-size: $small-header;
                     }
                     
                     p{
@@ -649,14 +658,14 @@ h2, p{
     #movement-main-header{
         position: relative;
         top: 13vh;
-        font-size: 5em;
+        font-size: $large-header;
         color: #fff;
     }
     
     #movement-secondary-header{
         position: relative;
         top: 7vh;
-        font-size: 2.5em;
+        font-size: $medium-header;
         color: #fff;
     }
 }
@@ -725,7 +734,7 @@ h2, p{
                         position: relative;
                         top: 0px;
                         color: #fff;
-                        font-size: 2em;
+                        font-size: $small-header;
                     }
                     
                     #movement-paragraph{
@@ -750,10 +759,6 @@ h2, p{
             width: 33vw;
             background: url("img/djokovic-large-08.jpg") $nrs 10% 100%;
             background-size: cover;
-            
-            #novak-movement{
-                font-size: 1.3em;
-            }
         }
     }
 }
@@ -778,14 +783,14 @@ h2, p{
     #backhand-main-header{
         position: relative;
         top: 13vh;
-        font-size: 5em;
+        font-size: $large-header;
         color: #fff;
     }
     
     #backhand-secondary-header{
         position: relative;
         top: 7vh;
-        font-size: 2.5em;
+        font-size: $medium-header;
         color: #fff;
     }
 }
@@ -868,7 +873,7 @@ h2, p{
                         position: relative;
                         top: 0px;
                         color: #fff;
-                        font-size: 2em;
+                        font-size: $small-header;
                     }
                     
                     #backhand-paragraph{
@@ -904,14 +909,14 @@ h2, p{
     #return-main-header{
         position: relative;
         top: 13vh;
-        font-size: 5em;
+        font-size: $large-header;
         color: #fff;
     }
     
     #return-secondary-header{
         position: relative;
         top: 7vh;
-        font-size: 2.5em;
+        font-size: $medium-header;
         color: #fff;
     }
 }
@@ -981,7 +986,7 @@ h2, p{
                         position: relative;
                         top: 0px;
                         color: #fff;
-                        font-size: 2em;
+                        font-size: $small-header;
                     }
                     
                     #return-paragraph{
@@ -1030,14 +1035,14 @@ h2, p{
     #forehand-main-header{
         position: relative;
         top: 13vh;
-        font-size: 5em;
+        font-size: $large-header;
         color: #fff;
     }
     
     #forehand-secondary-header{
         position: relative;
         top: 7vh;
-        font-size: 2.5em;
+        font-size: $medium-header;
         color: #fff;
     }
 }
@@ -1120,7 +1125,7 @@ h2, p{
                         position: relative;
                         top: 0px;
                         color: #fff;
-                        font-size: 2em;
+                        font-size: $small-header;
                     }
                     
                     #forehand-paragraph{
@@ -1156,14 +1161,14 @@ h2, p{
     #serve-main-header{
         position: relative;
         top: 13vh;
-        font-size: 5em;
+        font-size: $large-header;
         color: #fff;
     }
     
     #serve-secondary-header{
         position: relative;
         top: 7vh;
-        font-size: 2.5em;
+        font-size: $medium-header;
         color: #fff;
     }
 }
@@ -1233,7 +1238,7 @@ h2, p{
                         position: relative;
                         top: 0px;
                         color: #fff;
-                        font-size: 2em;
+                        font-size: $small-header;
                     }
                     
                     #serve-paragraph{
@@ -1282,14 +1287,14 @@ h2, p{
     #grit-main-header{
         position: relative;
         top: 13vh;
-        font-size: 5em;
+        font-size: $large-header;
         color: #fff;
     }
     
     #grit-secondary-header{
         position: relative;
         top: 7vh;
-        font-size: 2.5em;
+        font-size: $medium-header;
         color: #fff;
     }
 }
@@ -1372,7 +1377,7 @@ h2, p{
                         position: relative;
                         top: 0px;
                         color: #fff;
-                        font-size: 2em;
+                        font-size: $small-header;
                     }
                     
                     #grit-paragraph{
@@ -1399,14 +1404,14 @@ h2, p{
     #coach-main-header{
         position: relative;
         top: 60vh;
-        font-size: 5em;
+        font-size: $large-header;
         color: #fff;
     }
     
     #coach-secondary-header{
         position: relative;
         top: 53vh;
-        font-size: 2.5em;
+        font-size: $medium-header;
         color: #fff;
     }
 }
@@ -1476,7 +1481,7 @@ h2, p{
                         position: relative;
                         top: 0px;
                         color: #fff;
-                        font-size: 2em;
+                        font-size: $small-header;
                     }
                     
                     #coach-paragraph{
@@ -1529,15 +1534,31 @@ h2, p{
 
     .flex-item {
         //padding: 5px;
-        width: 290px;
-        height: 490px;
+        width: 20vw;
+        height: 400px;
+        padding: 15px;
         margin-top: 10px;
+        margin-bottom: 30px;
         color: white;
         text-align: center;
         filter: grayscale(30%);
+        transition: all 0.3s ease-in-out;
         
-        h2{
-            font-size: 1.5em
+        /*
+        &:nth-child(2), &:nth-child(3), &:nth-child(4), &:nth-child(5){
+            -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+            clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+        }
+        
+        &:nth-child(6), &:nth-child(7), &:nth-child(8), &:nth-child(9){
+            -webkit-clip-path: polygon(75% 0, 100% 100%, 25% 100%, 0 0);
+            clip-path: polygon(75% 0, 100% 100%, 25% 100%, 0 0);
+        }*/
+        
+        
+        
+        h1{
+            font-size: 1.3em;
         }
         
         &:nth-child(1){
@@ -1555,15 +1576,12 @@ h2, p{
         }
         
         &:nth-child(2){
-            width: 20vw;
-            height: 430px;
-            background: url("img/head-racquet-01.jpg") $nrs 50% 80%;
+            background: url("img/head-racquet-01.jpg") $nrs 50% 100%;
             background-size: 500px;
-            transition: all 0.3s ease-in-out;
             
-            #racket-header{
+            #head-header{
                 position: relative;
-                top: 350px;
+                top: 300px;
                 color: $blue;
             }
             
@@ -1574,15 +1592,12 @@ h2, p{
         }
         
         &:nth-child(3){
-            width: 20vw;
-            height: 430px;
-            background: url("img/uniqlo-01.jpg") $nrs 50% 50%;
+            background: url("img/uniqlo-01.jpg") $nrs 80% 50%;
             background-size: 700px;
-            transition: all 0.3s ease-in-out;
             
-            #past-apparel-header{
+            #uniqlo-header{
                 position: relative;
-                top: 350px;
+                top: 250px;
             }
             
             &:hover{
@@ -1592,15 +1607,12 @@ h2, p{
         }
         
         &:nth-child(4){
-            width: 20vw;
-            height: 430px;
             background: url("img/adidas-01.jpg") $nrs 50% 100%;
             background-size: 500px;
-            transition: all 0.3s ease-in-out;
             
-            #shoes-header{
+            #adidas-header{
                 position: relative;
-                top: 350px;
+                top: 300px;
                 color: $blue;
             }
             
@@ -1612,15 +1624,12 @@ h2, p{
         }
         
         &:nth-child(5){
-            width: 20vw;
-            height: 430px;
-            background: url("img/lacoste-01.jpg") $nrs 50% 50%;
+            background: url("img/lacoste-01.jpg") $nrs 50% 80%;
             background-size: 800px;
-            transition: all 0.3s ease-in-out;
             
-            #current-apparel-header{
+            #lacoste-header{
                 position: relative;
-                top: 350px;
+                top: 250px;
                 color: $blue;
             }
             
@@ -1630,16 +1639,65 @@ h2, p{
         }
         
         &:nth-child(6){
-            width: 80vw;
-            height: 150px;
-            background: transparent;
+            background: url("img/peugeot-01.jpg") $nrs 50% 80%;
+            background-size: 800px;
             
-            li{
-                color: #fff;
-                @include secondary-font;
-                font-size: 1.7em;
-                list-style: none;
-                
+            #peugeot-header{
+                position: relative;
+                top: 300px;
+                color: $white;
+            }
+            
+            &:hover{
+                background-size: 900px; 
+                filter: grayscale(0%);
+            }
+        }
+        
+        &:nth-child(7){
+            background: url("img/seiko-01.jpg") $nrs 50% 60%;
+            background-size: 700px;
+            
+            #seiko-header{
+                position: relative;
+                top: 300px;
+            }
+            
+            &:hover{
+                background-size: 900px;
+                filter: grayscale(0%);
+            }
+        }
+        
+        &:nth-child(8){
+            background: url("img/jacob-01.jpg") $nrs 50% 100%;
+            background-size: 500px;
+            
+            #jacob-header{
+                position: relative;
+                top: 300px;
+                color: $white;
+            }
+            
+            &:hover{
+                background-size: 700px;
+                filter: grayscale(0%);
+            }   
+            
+        }
+        
+        &:nth-child(9){
+            background: url("img/anz-01.jpg") $nrs 20% 50%;
+            background-size: 800px;
+            
+            #anz-header{
+                position: relative;
+                top: 300px;
+                color: $white;
+            }
+            
+            &:hover{
+               background-size: 900px; 
             }
         }
     }
@@ -1657,14 +1715,14 @@ h2, p{
     #end-main-header{
         position: relative;
         top: 60vh;
-        font-size: 5em;
+        font-size: $large-header;
         color: $white;
     }
     
     #end-secondary-header{
         position: relative;
         top: 53vh;
-        font-size: 2.5em;
+        font-size: $medium-header;
         color: $white;
     }
 }
