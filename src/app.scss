@@ -36,14 +36,28 @@ $eleven-height: 100vw * .7492; //Multiple based on image proportions
 	36%		    {-webkit-filter: blur(1.5px); -moz-filter: blur(1.5px);}
 }
 
-@keyframes occasional-brightness{
-    20%, 30%	{-webkit-filter: brightness(100%); -moz-filter: brightness(100%);}
-	25%		    {-webkit-filter: brightness(110%); -moz-filter: brightness(110%);}
+@keyframes bracket1Animation{
+    0%  {opacity: 0;}
+    20% {opacity: 0;}
+    40% {opacity: 0;}
+    60% {opacity: 1;}
+    100% {opacity: 0;}
 }
 
-@keyframes moveArrows{
-    0% { transform: translateY(0px);}
-    50% {transform: translateY(10px);}
+@keyframes bracket2Animation{
+    0%  {opacity: 0;}
+    20% {opacity: 0;}
+    40% {opacity: 1;}
+    60% {opacity: 0;}
+    100% {opacity: 0;}
+}
+
+@keyframes bracket3Animation{
+    0%  {opacity: 0;}
+    20% {opacity: 1;}
+    40% {opacity: 0;}
+    60% {opacity: 0;}
+    100% {opacity: 0;}
 }
 
 //mixins
@@ -65,7 +79,7 @@ $eleven-height: 100vw * .7492; //Multiple based on image proportions
 }
 
 @mixin complex-transform{
-    transform: scale(1.4) translateX(30px) rotateY(30deg) rotateZ(3deg);
+    transform: scale(1.2) translateX(10px) rotateY(30deg) rotateZ(1deg);
 }
 
 @mixin nav-color-change{
@@ -207,8 +221,8 @@ li{
     background-size: cover;
     //opacity: 0.9;
 	@include sidebar-transition;
-    -webkit-clip-path: polygon(46% 0, 100% 100%, 38% 100%, 0% 100%, 0 51%, 0% 0%);
-    clip-path: polygon(46% 0, 100% 100%, 38% 100%, 0% 100%, 0 51%, 0% 0%);
+   -webkit-clip-path: polygon(0 0, 50% 0, 100% 100%, 0% 100%);
+clip-path: polygon(0 0, 50% 0, 100% 100%, 0% 100%);
 }
 
 #main-content-wrapper{
@@ -260,7 +274,7 @@ li{
     position: relative;
     top: 10px;
     //left: 75px;
-	background: url("img/coat-of-arms-02.png") $nrs 20% 50%;
+	background: url("img/coat-of-arms-02.png") $nrs 30% 50%;
 	background-size: contain;
 	border: transparent;
 	width: 100%;
@@ -295,33 +309,64 @@ li{
 }
 
 .sidebar-nav li a{
-    display: block;
+    display: inline-block;
     color: $white;
     @include main-font;
     font-size: 1em;
     text-decoration: none;
     padding: 10px 15px 10px 30px;
     transition: all .5s ease;
+}
+
+.brackets{
+    opacity:0; 
+    //transition: opacity 0.2s ease;
     
-    .brackets{
-        opacity: 0;
+    
+    .bracket-1{
+        color: $white;
+    }
+    
+    .bracket-2{
+        color: $blue;
+    }
+    
+    .bracket-3{
+        color: $red;
     }
 }
 
 
-
 .sidebar-nav li{
-    a:first-letter{
+    .first-letter{
         font-size: 1.3em;
         letter-spacing: 5px;
     }
     
-    &:nth-child(3n-1) a:first-letter{
-            color: $red;
+    &:nth-child(3n-1) .first-letter{
+        color: $red;
     }
     
-    &:nth-child(3n) a:first-letter{
-            color: $blue;
+    &:nth-child(3n) .first-letter{
+        color: $blue;
+    }
+    
+    *:hover{
+        .brackets{
+            opacity:1;
+            
+            .bracket-1{
+                animation: 1.5s bracket1Animation infinite;
+            }
+            
+            .bracket-2{
+                animation: 1.5s bracket2Animation infinite;
+            }
+            
+            .bracket-3{
+                animation: 1.5s bracket3Animation infinite;
+            }
+        }
     }
 }
 
@@ -332,10 +377,6 @@ li{
 .sidebar-nav  li:nth-child(n).open a:active,
 .sidebar-nav  li:nth-child(n).open a:focus{
     @include complex-transform;
-}
-
-.sidebar-nav  li:nth-child(n) a:hover .brackets *{
-    opacity: 1;
 }
 
 #hamburger{
@@ -523,15 +564,30 @@ li{
 
     .flex-item {
         //padding: 5px;
-        width: 290px;
-        height: 490px;
+        width: 20vw;
+        height: 400px;
+        padding: 15px;
         margin-top: 10px;
-        color: white;
+        margin-bottom: 30px;
         text-align: center;
         filter: grayscale(30%);
+        transition: all 0.3s ease-in-out;
         
-        h2{
-            font-size: 1.5em
+        /*
+        &:nth-child(2), &:nth-child(3), &:nth-child(4), &:nth-child(5){
+            -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+            clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+        }
+        
+        &:nth-child(6), &:nth-child(7), &:nth-child(8), &:nth-child(9){
+            -webkit-clip-path: polygon(75% 0, 100% 100%, 25% 100%, 0 0);
+            clip-path: polygon(75% 0, 100% 100%, 25% 100%, 0 0);
+        }*/
+        
+        
+        
+        h1{
+            font-size: 1.3em;
         }
         
         &:nth-child(1){
@@ -549,15 +605,13 @@ li{
         }
         
         &:nth-child(2){
-            width: 20vw;
-            height: 430px;
-            background: url("img/australian-open-01.jpg") $nrs 50% 50%;
+            background: url("img/australian-open-01.jpg") $nrs 50% 40%;
             background-size: 800px;
-            transition: all 0.3s ease-in-out;
             
-            #ao-titles{
+            #ao-header{
                 position: relative;
-                top: 350px;
+                top: 250px;
+                color: $white;
             }
             
             &:hover{
@@ -567,15 +621,13 @@ li{
         }
         
         &:nth-child(3){
-            width: 20vw;
-            height: 430px;
-            background: url("img/roland-garros-01.jpg") $nrs 25% 50%;
+            background: url("img/roland-garros-01.jpg") $nrs 80% 50%;
             background-size: 800px;
-            transition: all 0.3s ease-in-out;
             
-            #fo-titles{
+            #fo-header{
                 position: relative;
-                top: 350px;
+                top: 300px;
+                color: $white;
             }
             
             &:hover{
@@ -585,15 +637,13 @@ li{
         }
         
         &:nth-child(4){
-            width: 20vw;
-            height: 430px;
-            background: url("img/wimbledon-02.jpg") $nrs 50% 70%;
+            background: url("img/wimbledon-02.jpg") $nrs 50% 100%;
             background-size: 800px;
-            transition: all 0.3s ease-in-out;
             
-            #w-titles{
+            #w-header{
                 position: relative;
-                top: 350px;
+                top: 300px;
+                color: $white;
             }
             
             &:hover{
@@ -604,15 +654,13 @@ li{
         }
         
         &:nth-child(5){
-            width: 20vw;
-            height: 430px;
-            background: url("img/us-open-01.jpg") $nrs 50% 50%;
+            background: url("img/us-open-01.jpg") $nrs 50% 80%;
             background-size: 800px;
-            transition: all 0.3s ease-in-out;
             
-            #uso-titles{
+            #uso-header{
                 position: relative;
-                top: 350px;
+                top: 300px;
+                color: $white;
             }
             
             &:hover{
@@ -621,16 +669,66 @@ li{
         }
         
         &:nth-child(6){
-            width: 80vw;
-            height: 150px;
-            background: transparent;
+            background: url("img/atp-masters-1000-01.jpg") $nrs 50% 80%;
+            background-size: 800px;
             
-            li{
-                color: #fff;
-                @include secondary-font;
-                font-size: 1.7em;
-                list-style: none;
-                
+            #atp-1000-header{
+                position: relative;
+                top: 250px;
+                color: $white;
+            }
+            
+            &:hover{
+                background-size: 900px; 
+                filter: grayscale(0%);
+            }
+        }
+        
+        &:nth-child(7){
+            background: url("img/atp-500-01.jpg") $nrs 45% 60%;
+            background-size: 800px;
+            
+            #atp-500-header{
+                position: relative;
+                top: 300px;
+                color: $white;
+            }
+            
+            &:hover{
+                background-size: 900px;
+                filter: grayscale(0%);
+            }
+        }
+        
+        &:nth-child(8){
+            background: url("img/atp-250-01.jpg") $nrs 70% 100%;
+            background-size: 800px;
+            
+            #atp-250-header{
+                position: relative;
+                top: 300px;
+                color: $white;
+            }
+            
+            &:hover{
+                background-size: 900px;
+                filter: grayscale(0%);
+            }   
+            
+        }
+        
+        &:nth-child(9){
+            background: url("img/trophy-01.jpg") $nrs 92% 20%;
+            background-size: 800px;
+            
+            #money-header{
+                position: relative;
+                top: 250px;
+                color: $white;
+            }
+            
+            &:hover{
+               background-size: 900px; 
             }
         }
     }
@@ -692,7 +790,6 @@ li{
 
     .flex-item {
         margin: 0px;
-        color: white;
         font-weight: bold;
         text-align: center;
         
@@ -716,12 +813,10 @@ li{
             }
 
             .flex-item {
-                background: tomato;
                 width: 67vw;
                 margin: 0px;
 
                 line-height: 30px;
-                color: white;
                 text-align: center;
                 
                 &:nth-child(1){
@@ -817,7 +912,6 @@ li{
 
     .flex-item {
         margin: 0px;
-        color: white;
         font-weight: bold;
         text-align: center;
         
@@ -848,12 +942,11 @@ li{
             }
 
             .flex-item {
-                background: tomato;
                 width: 67vw;
                 margin: 0px;
 
                 line-height: 30px;
-                color: white;
+                color: $white;
                 font-weight: bold;
                 text-align: center;
                 
@@ -943,7 +1036,6 @@ li{
 
     .flex-item {
         margin: 0px;
-        color: white;
         font-weight: bold;
         text-align: center;
         
@@ -967,12 +1059,10 @@ li{
             }
 
             .flex-item {
-                background: tomato;
                 width: 67vw;
                 margin: 0px;
 
                 line-height: 30px;
-                color: white;
                 font-weight: bold;
                 text-align: center;
                 
@@ -1069,7 +1159,6 @@ li{
 
     .flex-item {
         margin: 0px;
-        color: white;
         font-weight: bold;
         text-align: center;
         
@@ -1100,12 +1189,10 @@ li{
             }
 
             .flex-item {
-                background: tomato;
                 width: 67vw;
                 margin: 0px;
 
                 line-height: 30px;
-                color: white;
                 font-weight: bold;
                 text-align: center;
                 
@@ -1195,7 +1282,6 @@ li{
 
     .flex-item {
         margin: 0px;
-        color: white;
         font-weight: bold;
         text-align: center;
         
@@ -1219,12 +1305,10 @@ li{
             }
 
             .flex-item {
-                background: tomato;
                 width: 67vw;
                 margin: 0px;
 
                 line-height: 30px;
-                color: white;
                 font-weight: bold;
                 text-align: center;
                 
@@ -1321,7 +1405,6 @@ li{
 
     .flex-item {
         margin: 0px;
-        color: white;
         font-weight: bold;
         text-align: center;
         
@@ -1352,12 +1435,10 @@ li{
             }
 
             .flex-item {
-                background: tomato;
                 width: 67vw;
                 margin: 0px;
 
                 line-height: 30px;
-                color: white;
                 font-weight: bold;
                 text-align: center;
                 
@@ -1438,7 +1519,6 @@ li{
 
     .flex-item {
         margin: 0px;
-        color: white;
         font-weight: bold;
         text-align: center;
         
@@ -1462,12 +1542,10 @@ li{
             }
 
             .flex-item {
-                background: tomato;
                 width: 67vw;
                 margin: 0px;
 
                 line-height: 30px;
-                color: white;
                 font-weight: bold;
                 text-align: center;
                 
@@ -1480,14 +1558,14 @@ li{
                     #support-network{
                         position: relative;
                         top: 0px;
-                        color: #fff;
+                        color: $white;
                         font-size: $small-header;
                     }
                     
                     #coach-paragraph{
                         position: relative;
                         top: 30px;
-                        color: #fff;
+                        color: $white;
                         font-size: 1.3em;
                         margin: 0px 60px;
                     }
@@ -1539,7 +1617,6 @@ li{
         padding: 15px;
         margin-top: 10px;
         margin-bottom: 30px;
-        color: white;
         text-align: center;
         filter: grayscale(30%);
         transition: all 0.3s ease-in-out;
