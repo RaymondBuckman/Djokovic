@@ -90,7 +90,7 @@ $(document).ready(function(){
         duration: "150%"
     })
     .setTween(intro1ParallaxTween)
-    .addIndicators()
+    //.addIndicators()
     .addTo(controller);
     
     var movement1ParallaxTween = TweenMax.from(".Movement-1", 1, {
@@ -105,12 +105,12 @@ $(document).ready(function(){
         duration: "200%"
     })
     .setTween(movement1ParallaxTween)
-    
+    /*
     .addIndicators({
         name: 'movement',
         colorTrigger: 'yellow',
         colorStart: '#75C695'
-    })
+    })*/
     .addTo(controller);
     
     var backhand1ParallaxTween = TweenMax.from(".Backhand-1", 1, {
@@ -140,12 +140,12 @@ $(document).ready(function(){
         duration: "200%"
     })
     .setTween(return1ParallaxTween)
-    
+    /*
     .addIndicators({
         name: 'movement',
         colorTrigger: 'yellow',
         colorStart: '#75C695'
-    })
+    })*/
     .addTo(controller);
     
     var forehand1ParallaxTween = TweenMax.from(".Forehand-1", 1, {
@@ -259,57 +259,60 @@ $(document).ready(function(){
         var tilt3 = document.getElementById("the-origin-of-a-champion");
         var tilt4 = document.getElementById("origin-paragraph");
         var tilt5 = document.getElementById("titles");
-        var tilt6 = document.getElementById("ao-titles");
-        var tilt7 = document.getElementById("fo-titles");
-        var tilt8 = document.getElementById("w-titles");
-        var tilt9 = document.getElementById("uso-titles");
-        var tilt10 = document.getElementById("other-titles-list");
-        var tilt11 = document.getElementById("movement-video");
-        var tilt12 = document.getElementById("movement-main-header");
-        var tilt13 = document.getElementById("movement-secondary-header");
-        var tilt14 = document.getElementById("you-shall-not-pass");
-        var tilt15 = document.getElementById("movement-paragraph");
-        var tilt16 = document.getElementById("backhand-video");
-        var tilt17 = document.getElementById("backhand-main-header");
-        var tilt18 = document.getElementById("backhand-secondary-header");
-        var tilt19 = document.getElementById("power-accuracy");
-        var tilt20 = document.getElementById("backhand-paragraph");
-        var tilt21 = document.getElementById("return-video");
-        var tilt22 = document.getElementById("return-main-header");
-        var tilt23 = document.getElementById("return-secondary-header");
-        var tilt24 = document.getElementById("return-to-sender");
-        var tilt25 = document.getElementById("return-paragraph");
-        var tilt26 = document.getElementById("forehand-video");
-        var tilt27 = document.getElementById("forehand-main-header");
-        var tilt28 = document.getElementById("forehand-secondary-header");
-        var tilt29 = document.getElementById("attack-his-what");
-        var tilt30 = document.getElementById("forehand-paragraph");
-        var tilt31 = document.getElementById("serve-video");
-        var tilt32 = document.getElementById("serve-main-header");
-        var tilt33 = document.getElementById("serve-secondary-header");
-        var tilt34 = document.getElementById("the-straw");
-        var tilt35 = document.getElementById("serve-paragraph");
-        var tilt36 = document.getElementById("grit-video");
-        var tilt37 = document.getElementById("grit-main-header");
-        var tilt38 = document.getElementById("grit-secondary-header");
-        var tilt39 = document.getElementById("down-but-not-out");
-        var tilt40 = document.getElementById("grit-paragraph");
-        var tilt41 = document.getElementById("coach-main-header");
-        var tilt42 = document.getElementById("coach-secondary-header");
-        var tilt43 = document.getElementById("support-network");
-        var tilt44 = document.getElementById("coach-paragraph");
-        var tilt45 = document.getElementById("gear");
-        var tilt46 = document.getElementById("head-header");
-        var tilt47 = document.getElementById("uniqlo-header");
-        var tilt48 = document.getElementById("adidas-header");
-        var tilt49 = document.getElementById("lacoste-header");
-        var tilt50 = document.getElementById("peugeot-header");
-        var tilt51 = document.getElementById("seiko-header");
-        var tilt52 = document.getElementById("jacob-header");
-        var tilt53 = document.getElementById("anz-header"); 
-        var tilt54 = document.getElementById("end-main-header");
-        var tilt55 = document.getElementById("end-secondary-header");
-        var tilt56 = document.getElementById("back-to-content");        
+        var tilt6 = document.getElementById("ao-header");
+        var tilt7 = document.getElementById("fo-header");
+        var tilt8 = document.getElementById("w-header");
+        var tilt9 = document.getElementById("uso-header");
+        var tilt10 = document.getElementById("atp-1000-header");
+        var tilt11 = document.getElementById("atp-500-header");
+        var tilt12 = document.getElementById("atp-250-header");
+        var tilt13 = document.getElementById("money-header");
+        var tilt14 = document.getElementById("movement-video");
+        var tilt15 = document.getElementById("movement-main-header");
+        var tilt16 = document.getElementById("movement-secondary-header");
+        var tilt17 = document.getElementById("you-shall-not-pass");
+        var tilt18 = document.getElementById("movement-paragraph");
+        var tilt19 = document.getElementById("backhand-video");
+        var tilt20 = document.getElementById("backhand-main-header");
+        var tilt21 = document.getElementById("backhand-secondary-header");
+        var tilt22 = document.getElementById("power-accuracy");
+        var tilt23 = document.getElementById("backhand-paragraph");
+        var tilt24 = document.getElementById("return-video");
+        var tilt25 = document.getElementById("return-main-header");
+        var tilt26 = document.getElementById("return-secondary-header");
+        var tilt27 = document.getElementById("return-to-sender");
+        var tilt28 = document.getElementById("return-paragraph");
+        var tilt29 = document.getElementById("forehand-video");
+        var tilt30 = document.getElementById("forehand-main-header");
+        var tilt31 = document.getElementById("forehand-secondary-header");
+        var tilt32 = document.getElementById("attack-his-what");
+        var tilt33 = document.getElementById("forehand-paragraph");
+        var tilt34 = document.getElementById("serve-video");
+        var tilt35 = document.getElementById("serve-main-header");
+        var tilt36 = document.getElementById("serve-secondary-header");
+        var tilt37 = document.getElementById("the-straw");
+        var tilt38 = document.getElementById("serve-paragraph");
+        var tilt39 = document.getElementById("grit-video");
+        var tilt40 = document.getElementById("grit-main-header");
+        var tilt41 = document.getElementById("grit-secondary-header");
+        var tilt42 = document.getElementById("down-but-not-out");
+        var tilt43 = document.getElementById("grit-paragraph");
+        var tilt44 = document.getElementById("coach-main-header");
+        var tilt45 = document.getElementById("coach-secondary-header");
+        var tilt46 = document.getElementById("support-network");
+        var tilt47 = document.getElementById("coach-paragraph");
+        var tilt48 = document.getElementById("gear");
+        var tilt49 = document.getElementById("head-header");
+        var tilt50 = document.getElementById("uniqlo-header");
+        var tilt51 = document.getElementById("adidas-header");
+        var tilt52 = document.getElementById("lacoste-header");
+        var tilt53 = document.getElementById("peugeot-header");
+        var tilt54 = document.getElementById("seiko-header");
+        var tilt55 = document.getElementById("jacob-header");
+        var tilt56 = document.getElementById("anz-header"); 
+        var tilt57 = document.getElementById("end-main-header");
+        var tilt58 = document.getElementById("end-secondary-header");
+        var tilt59 = document.getElementById("back-to-content");        
         
         
         tilt0.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
@@ -323,35 +326,35 @@ $(document).ready(function(){
         tilt8.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
         tilt9.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
         tilt10.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
-        
+        tilt11.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
         tilt12.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
         tilt13.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
-        tilt14.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
+        //tilt14.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
         tilt15.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
-        
+        tilt16.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
         tilt17.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
         tilt18.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
-        tilt19.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
+        //tilt19.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
         tilt20.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
-         
+        tilt21.style.transform = "perspective(1000px) rotateY(" + xval + "deg)"; 
         tilt22.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
         tilt23.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
-        tilt24.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
+        //tilt24.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
         tilt25.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
-        
+        tilt26.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
         tilt27.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
         tilt28.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
-        tilt29.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
+        //tilt29.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
         tilt30.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
-        
+        tilt31.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
         tilt32.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
         tilt33.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
-        tilt34.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
+        //tilt34.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
         tilt35.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
-        
+        tilt36.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
         tilt37.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
         tilt38.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
-        tilt39.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
+        //tilt39.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
         tilt40.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
         tilt41.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
         tilt42.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
@@ -369,7 +372,9 @@ $(document).ready(function(){
         tilt54.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
         tilt55.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
         tilt56.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
-
+        tilt57.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
+        tilt58.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
+        tilt59.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
     }
 
     document.addEventListener("mousemove", function (event)
