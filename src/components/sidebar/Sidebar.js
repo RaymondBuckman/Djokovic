@@ -5,7 +5,7 @@ class Sidebar extends Component {
     render() {
         return(
         <div>
-            <ul className="sidebar-nav">
+            <ul className="sidebar-nav" role="navigation">
                 <div id="coat-of-arms"></div>
                 <li>
                     <a href="#titles-section">
@@ -23,7 +23,7 @@ class Sidebar extends Component {
                     </a>
                 </li>
                 <li>
-                    <a href="#movement-section">
+                    <a href="#movement-section" role="link">
                         <span className="brackets">
                             <span className="bracket-3">&#10093;</span>
                             <span className="bracket-2">&#10093;</span>
@@ -38,7 +38,7 @@ class Sidebar extends Component {
                     </a>
                 </li>
                 <li>
-                    <a href="#backhand-section">
+                    <a href="#backhand-section" role="link">
                         <span className="brackets">
                             <span className="bracket-3">&#10093;</span>
                             <span className="bracket-2">&#10093;</span>
@@ -53,7 +53,7 @@ class Sidebar extends Component {
                     </a>
                 </li>
                 <li>
-                    <a href="#return-section">
+                    <a href="#return-section" role="link">
                         <span className="brackets">
                             <span className="bracket-3">&#10093;</span>
                             <span className="bracket-2">&#10093;</span>
@@ -68,7 +68,7 @@ class Sidebar extends Component {
                     </a>
                 </li>
                 <li>
-                    <a href="#forehand-section">
+                    <a href="#forehand-section" role="link">
                         <span className="brackets">
                             <span className="bracket-3">&#10093;</span>
                             <span className="bracket-2">&#10093;</span>
@@ -83,7 +83,7 @@ class Sidebar extends Component {
                     </a>
                 </li>
                 <li>
-                    <a href="#serve-section">
+                    <a href="#serve-section" role="link">
                         <span className="brackets">
                             <span className="bracket-3">&#10093;</span>
                             <span className="bracket-2">&#10093;</span>
@@ -98,7 +98,7 @@ class Sidebar extends Component {
                     </a>
                 </li>
                 <li>
-                    <a href="#grit-section">
+                    <a href="#grit-section" role="link">
                         <span className="brackets">
                             <span className="bracket-3">&#10093;</span>
                             <span className="bracket-2">&#10093;</span>
@@ -113,7 +113,7 @@ class Sidebar extends Component {
                     </a>
                 </li>
                 <li>
-                    <a href="#coach-section">
+                    <a href="#coach-section" role="link">
                         <span className="brackets">
                             <span className="bracket-3">&#10093;</span>
                             <span className="bracket-2">&#10093;</span>
@@ -128,7 +128,7 @@ class Sidebar extends Component {
                     </a>
                 </li>
                 <li>
-                    <a href="#gear-section">
+                    <a href="#gear-section" role="link">
                         <span className="brackets">
                             <span className="bracket-3">&#10093;</span>
                             <span className="bracket-2">&#10093;</span>
