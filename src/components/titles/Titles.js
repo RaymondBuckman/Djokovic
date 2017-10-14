@@ -7,7 +7,7 @@ export default class Titles extends Component {
         <div>
             <div className="Titles-1" id="titles-section">
                 <ul className="flex-container">
-                    <li className="flex-item"><h1 id="titles">Titles</h1></li>
+                    <li className="flex-item"><h1 id="titles" role="heading" tabIndex="0">Titles</h1></li>
                     <li className="flex-item" id="ao-titles-flexbox"><h1 id="ao-header">6 Australian Open Titles</h1></li>
                     <li className="flex-item" id="fo-titles-flexbox"><h1 id="fo-header">1 French Open Title</h1></li>
                     <li className="flex-item" id="w-titles-flexbox"><h1 id="w-header">3 Wimbledon Titles</h1></li>
