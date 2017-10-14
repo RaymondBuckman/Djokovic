@@ -389,13 +389,17 @@ h1:focus{
     left: 5px;
     display: inline-block;
     opacity: 0.5;
-    transition: all 0.3s ease-in;
+    transition: opacity 0.3s ease-in, transform 0.3s ease-in;
     z-index: 98;
     
     &:hover{
         cursor: pointer;
         opacity: 1;
         transform: scale(1.1);
+    }
+    
+    &:focus, &:active{
+        outline: 2px solid $red;
     }
 }
 
@@ -408,13 +412,17 @@ h1:focus{
     right: 0;
     display: inline-block;
     opacity: 0.5;
-    transition: all 0.3s ease-in;
+    cursor: pointer;
+    transition: opacity 0.3s ease-in, transform 0.3s ease-in;
     z-index: 99;
     
     &:hover{
-        cursor: pointer;
         opacity: 1;
         transform: scale(1.1);
+    }
+    
+    &:focus, &:active{
+        outline: 2px solid $red;
     }
 }
 
@@ -627,7 +635,7 @@ h1:focus{
         }
         
         &:nth-child(3){
-            background: url("img/roland-garros-01.jpg") $nrs 80% 50%;
+            background: url("img/roland-garros-01.jpg") $nrs 30% 50%;
             background-size: 800px;
             
             #fo-header{
@@ -840,7 +848,7 @@ h1:focus{
                     
                     #movement-paragraph{
                         position: relative;
-                        top: 10px;
+                        top: 30px;
                         color: #fff;
                         font-size: 1.3em;
                         margin: 0px 60px;
@@ -1620,7 +1628,8 @@ h1:focus{
         //padding: 5px;
         width: 20vw;
         height: 400px;
-        padding: 15px;
+        margin-top: 10px;
+        margin-bottom: 30px;
         text-align: center;
         filter: grayscale(30%);
         transition: all 0.3s ease-in-out;
@@ -1643,8 +1652,7 @@ h1:focus{
             color: transparent;
             text-decoration: none !important;
             display: block; 
-            margin-top: 10px;
-            margin-bottom: 30px;
+            padding: 15px;
             
             a:focus{
                 outline: none;
