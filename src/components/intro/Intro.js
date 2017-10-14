@@ -21,7 +21,7 @@ export default class Intro extends Component {
                 <div className="container-fluid" id="one-container">
                     <div className="row">
                         <YouTube videoId="4U9I5gHHWvU" opts={opts} id="intro-video" onReady={this._onReady}/>   
-                        <h1 id="intro-main-header" className="text-center">Novak Djokovic</h1>
+                        <h1 id="intro-main-header" className="text-center" role="heading">Novak Djokovic</h1>
                         <h2 id="intro-secondary-header" className="text-center">Man meets machine</h2>
                     </div>
                 </div>

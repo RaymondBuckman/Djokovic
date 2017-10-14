@@ -33,9 +33,9 @@ ReactDOM.render(
                 <Sidebar />
             </div>
             <h1 id="back-to-content" className="col-xs-8 col-xs-offset-2 text-center">Click to return to content</h1>
-            <img id="hamburger" src={hamburger} height="40px" width="40px"></img>
+            <img id="hamburger" src={hamburger} height="40px" width="40px" tabIndex="0" alt="opens sidebar navigation"></img>
             <div id="main-content-wrapper">                
-                <a href="#top-of-page"><img id="djokovic-logo" src={djokovicLogo} height="70px" width="70px"></img></a>
+                <a href="#top-of-page"><img id="djokovic-logo" src={djokovicLogo} height="70px" width="70px" tabIndex="0" alt="goes to the top of the page"></img></a>
                 <Intro />
                 <Titles />
                 <Movement />
@@ -314,7 +314,6 @@ $(document).ready(function(){
         var tilt58 = document.getElementById("end-secondary-header");
         var tilt59 = document.getElementById("back-to-content");        
         
-        
         tilt0.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
         tilt1.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
         tilt2.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
@@ -375,6 +374,8 @@ $(document).ready(function(){
         tilt57.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
         tilt58.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
         tilt59.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
+        
+        
     }
 
     document.addEventListener("mousemove", function (event)
