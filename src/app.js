@@ -54,26 +54,21 @@ ReactDOM.render(
 );
 
 
-$(document).ready(function(){ 
-    var menuRotate = 0;
-
-     $('#main-content-wrapper, #close').click(function(){
+$(document).ready(function(){
+    $("#down-arrow").click(function() {
+        $('html, body').animate({
+            scrollTop: $(".Intro-2").offset().top
+        }, 1200);
+    });
+    
+     $('#main-content-wrapper').click(function(){
           $('#wrapper').removeClass('menuDisplayed');
           $('#main-content-wrapper *').removeClass('disabled');
-          $('#close').css({
-               'opacity' : "0",
-               'transform' : 'translateX(0px)',
-               'transform' : 'rotateY(90deg)'
-          });
      });
 
      $('#hamburger').click(function(){
           $('#wrapper').addClass('menuDisplayed');
           $('#main-content-wrapper *').addClass('disabled');
-          $('#close').css({
-               'transform' : 'translateX(30px)',
-               'opacity' : '1'
-          });
     });
       
     var controller = new ScrollMagic.Controller();    
