@@ -14,7 +14,7 @@ class Sidebar extends Component {
                             <span className="bracket-2">&#10093;</span>
                             <span className="bracket-1">&#10093; </span>
                         </span>
-                        <span className="first-letter">T</span>itles 
+                        <span className="first-letter" role="link">T</span>itles 
                         <span className="brackets">
                             <span className="bracket-1"> &#10092;</span>
                             <span className="bracket-2">&#10092;</span>
