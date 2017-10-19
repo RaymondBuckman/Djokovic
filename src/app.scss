@@ -31,6 +31,11 @@ $eleven-height: 100vw * .7492; //Multiple based on image proportions
 	36%		    {-webkit-filter: blur(1.5px); -moz-filter: blur(1.5px);}
 }
 
+@keyframes infiniteRotation{
+	0%	       {transform: rotateY(0deg);}
+	100%       {transform: rotateY(2880deg);}
+}
+
 @keyframes occasionalBlur{
 	20%, 52%	{-webkit-filter: blur(0px); -moz-filter: blur(0px);}
 	36%		    {-webkit-filter: blur(1.5px); -moz-filter: blur(1.5px);}
@@ -58,6 +63,15 @@ $eleven-height: 100vw * .7492; //Multiple based on image proportions
     40% {opacity: 0;}
     60% {opacity: 0;}
     100% {opacity: 0;}
+}
+
+@keyframes belgradeSlideshow{
+    0%  {background: url("img/belgrade-01.jpg") $nrs 60% 50%; background-size: 1200px;}
+    20% {background: url("img/belgrade-02.jpg") $nrs 60% 50%; background-size: 1200px;}
+    40% {background: url("img/belgrade-03.jpg") $nrs 60% 50%; background-size: 1200px;}
+    60% {background: url("img/belgrade-04.jpg") $nrs 60% 50%; background-size: 1200px;}
+    80% {background: url("img/belgrade-05.jpg") $nrs 60% 50%; background-size: 1200px;}
+    100%  {background: url("img/belgrade-01.jpg") $nrs 60% 50%; background-size: 1200px;}
 }
 
 //mixins
@@ -398,8 +412,8 @@ h1:focus{
         transform: scale(1.1);
     }
     
-    &:focus, &:active{
-        outline: 2px solid $red;
+    &:focus{
+        outline: none;
     }
 }
 
@@ -421,8 +435,8 @@ h1:focus{
         transform: scale(1.1);
     }
     
-    &:focus, &:active{
-        outline: 2px solid $red;
+    &:focus{
+        outline: none;
     }
 }
 
@@ -454,6 +468,24 @@ h1:focus{
         font-size: $medium-header;
         color: $white;
     }
+    
+    #down-arrow{
+        position: relative;
+        top: 9vh;
+        font-size: $medium-header;
+        color: $white;
+        display:block;
+        margin:auto;
+        opacity: 0.5;
+        transition: opacity 0.3s ease-in, transform 0.3s ease-in;
+        //animation: infiniteRotation 150s infinite;
+        
+        &:hover{
+            opacity: 1;
+            cursor: pointer;
+            transform: scale(1.1);
+        }
+    }
 }
 
 .Intro-2{
@@ -484,8 +516,10 @@ h1:focus{
         &:nth-child(1){
             height: 100vh;
             width: 33vw;
-            background: url("img/belgrade-02.jpg") $nrs 60% 50%;
+            
+            background: url("img/belgrade-02.jpg") $nrs 60% 50%; 
             background-size: cover;
+            //animation: belgradeSlideshow 15s infinite;
             
             #belgrade-serbia{
                 position: relative;
@@ -514,7 +548,7 @@ h1:focus{
                 justify-content: space-around;
             }
 
-            .flex-item {
+            .inner-flex-item {
                 width: 67vw;
                 margin: 0px;
 
