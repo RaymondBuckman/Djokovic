@@ -150,12 +150,3 @@ class Sidebar extends Component {
 }
 
 export default Sidebar;
-
-<ul className="nav sidebar-nav">
-                    <li className="sidebar-brand">
-                        <a href="#">
-                           Brand
-                        </a>
-                    </li>
-                    
-                </ul>
