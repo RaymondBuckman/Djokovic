@@ -20,9 +20,15 @@ export default class Grit extends Component {
             <div className="Grit-1" id="grit-section">
                 <div className="container-fluid">
                     <div className="row">
-                        <YouTube videoId="ghRMOORLZKU" opts={opts} id="grit-video" className="video-fade-in" onReady={this._onReady}/>   
-                        <h1 id="grit-main-header" className="text-center" role="heading">Grit</h1>
-                        <h2 id="grit-secondary-header" className="text-center">Never give up</h2>
+                        <div className="col-12">
+                            <YouTube videoId="ghRMOORLZKU" opts={opts} id="grit-video" className="video-fade-in" onReady={this._onReady}/> 
+                        </div>
+                    </div>
+                    <div className="row">
+                        <h1 id="grit-main-header" className="mx-auto" role="heading">Grit</h1>
+                    </div>
+                    <div className="row">
+                        <h2 id="grit-secondary-header" className="mx-auto">Never give up</h2>
                     </div>
                 </div>
             </div>

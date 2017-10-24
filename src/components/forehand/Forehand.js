@@ -20,9 +20,15 @@ export default class Forehand extends Component {
             <div className="Forehand-1" id="forehand-section">
                 <div className="container-fluid">
                     <div className="row">
-                        <YouTube videoId="C_kvfS1Jafg" opts={opts} id="forehand-video" className="video-fade-in" onReady={this._onReady}/>   
-                        <h1 id="forehand-main-header" className="text-center" role="heading">Forehand</h1>
-                        <h2 id="forehand-secondary-header" className="text-center">The ultimate "weakness"</h2>
+                        <div className="col-12">
+                            <YouTube videoId="C_kvfS1Jafg" opts={opts} id="forehand-video" className="video-fade-in" onReady={this._onReady}/>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <h1 id="forehand-main-header" className="mx-auto" role="heading">Forehand</h1>
+                    </div>
+                    <div className="row">
+                        <h2 id="forehand-secondary-header" className="mx-auto">The ultimate "weakness"</h2>
                     </div>
                 </div>
             </div>

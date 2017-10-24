@@ -20,9 +20,15 @@ export default class Return extends Component {
             <div className="Return-1" id="return-section">
                 <div className="container-fluid">
                     <div className="row">
-                        <YouTube videoId="xkxmPKjsUjc" opts={opts} id="return-video" className="video-fade-in" onReady={this._onReady}/>   
-                        <h1 id="return-main-header" className="text-center" role="heading">Return</h1>
-                        <h2 id="return-secondary-header" className="text-center">Shut it down</h2>
+                        <div className="col-12">
+                            <YouTube videoId="xkxmPKjsUjc" opts={opts} id="return-video" className="video-fade-in" onReady={this._onReady}/>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <h1 id="return-main-header" className="mx-auto" role="heading">Return</h1>
+                    </div>
+                    <div className="row">
+                        <h2 id="return-secondary-header" className="mx-auto">Shut it down</h2>
                     </div>
                 </div>
             </div>

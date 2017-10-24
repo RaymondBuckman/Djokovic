@@ -446,10 +446,19 @@ h1:focus{
     background: url("img/djokovic-large-01.jpg") repeat fixed -110% 26%;
     background-size: 110vw;
     
+    /*
+    .container-fluid{
+        display: flex;
+        flex-grow: 1;
+        justify-content: center;
+    }*/
+    
     #intro-video{
         position: relative;
         top: 13vh;
-        //left: -30px;
+        //left: 50%;
+        //transform: translateX(-50%);
+        text-align: center;
         display: block;
         margin: 0 auto;
         padding: 10px;

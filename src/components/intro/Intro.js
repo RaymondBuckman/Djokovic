@@ -19,11 +19,19 @@ export default class Intro extends Component {
         return(
         <div>
             <div id="top-of-page" className="Intro-1">
-                <div className="container-fluid" id="one-container">
+                <div className="container" id="one-container">
                     <div className="row">
-                        <YouTube videoId="4U9I5gHHWvU" opts={opts} id="intro-video" onReady={this._onReady}/>   
-                        <h1 id="intro-main-header" className="text-center" role="heading">Novak Djokovic</h1>
-                        <h2 id="intro-secondary-header" className="text-center">Man meets machine</h2>
+                        <div className="col-12">
+                            <YouTube videoId="4U9I5gHHWvU" opts={opts} id="intro-video" className="mx-auto" onReady={this._onReady}/> 
+                        </div>
+                    </div>
+                    <div className="row">
+                        <h1 id="intro-main-header" className="mx-auto" role="heading">Novak Djokovic</h1>
+                    </div>
+                    <div className="row">
+                        <h2 id="intro-secondary-header" className="mx-auto">Man meets machine</h2>
+                    </div>
+                    <div className="row">
                         <img id="down-arrow" src={downArrow} height="35px" className="text-center"></img>
                     </div>
                 </div>

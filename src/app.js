@@ -1,4 +1,5 @@
 const css = require('./app.scss');
+require('./img/favicon.ico');
 import {TweenMax, Power2, TimelineLite} from "gsap";
 import scrollTo from '../node_modules/gsap/ScrollToPlugin';
 import ScrollMagic from 'scrollmagic';
@@ -32,7 +33,13 @@ ReactDOM.render(
             <div id="sidebar-wrapper">
                 <Sidebar />
             </div>
-            <h1 id="back-to-content" className="col-xs-8 col-xs-offset-2 text-center">Click to return to content</h1>
+            <div className="container-fluid">
+                <div className="row">
+                    <div className="col-10 offset-3">
+                        <h1 id="back-to-content" className="mx-auto">Click to return to content</h1>
+                    </div>
+                </div>
+            </div>
             <img id="hamburger" src={hamburger} height="40px" width="40px" tabIndex="0" alt="opens sidebar navigation"></img>
             <div id="main-content-wrapper">                
                 <a href="#top-of-page"><img id="djokovic-logo" src={djokovicLogo} height="70px" width="70px" tabIndex="0" alt="goes to the top of the page"></img></a>

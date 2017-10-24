@@ -20,9 +20,15 @@ export default class Serve extends Component {
             <div className="Serve-1" id="serve-section">
                 <div className="container-fluid">
                     <div className="row">
-                        <YouTube videoId="_HvKoOmMDYg" opts={opts} id="serve-video" className="video-fade-in" onReady={this._onReady}/>   
-                        <h1 id="serve-main-header" className="text-center" role="heading">Serve</h1>
-                        <h2 id="serve-secondary-header" className="text-center">One-way traffic</h2>
+                        <div className="col-12">
+                            <YouTube videoId="_HvKoOmMDYg" opts={opts} id="serve-video" className="video-fade-in" onReady={this._onReady}/>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <h1 id="serve-main-header" className="mx-auto" role="heading">Serve</h1> 
+                    </div>
+                    <div className="row">
+                        <h2 id="serve-secondary-header" className="mx-auto">One-way traffic</h2>
                     </div>
                 </div>
             </div>

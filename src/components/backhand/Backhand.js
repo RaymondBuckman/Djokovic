@@ -20,9 +20,15 @@ export default class Backhand extends Component {
             <div className="Backhand-1" id="backhand-section">
                 <div className="container-fluid">
                     <div className="row">
-                        <YouTube videoId="PVRJgHewyFY" opts={opts} id="backhand-video" className="video-fade-in" onReady={this._onReady}/>   
-                        <h1 id="backhand-main-header" className="text-center" role="heading">Backhand</h1>
-                        <h2 id="backhand-secondary-header" className="text-center">Approach at your own peril</h2>
+                        <div className="col-12">
+                            <YouTube videoId="PVRJgHewyFY" opts={opts} id="backhand-video" className="video-fade-in" onReady={this._onReady}/>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <h1 id="backhand-main-header" className="mx-auto" role="heading">Backhand</h1>
+                    </div>
+                    <div className="row">
+                        <h2 id="backhand-secondary-header" className="mx-auto">Approach at your own peril</h2>
                     </div>
                 </div>
             </div>
