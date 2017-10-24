@@ -9,8 +9,10 @@ export default class Coach extends Component {
             <div className="Coach-1" id="coach-section">
                 <div className="container-fluid">
                     <div className="row">
-                        <h1 id="coach-main-header" className="text-center" role="heading">Coaching Staff</h1>
-                        <h2 id="coach-secondary-header" className="text-center">The team behind the sensation</h2>
+                        <h1 id="coach-main-header" className="mx-auto" role="heading">Coaching Staff</h1>
+                    </div>
+                    <div className="row">
+                        <h2 id="coach-secondary-header" className="mx-auto">The team behind the sensation</h2>
                     </div>
                 </div>
             </div>
