@@ -71,11 +71,13 @@ $(document).ready(function(){
      $('#main-content-wrapper').click(function(){
           $('#wrapper').removeClass('menuDisplayed');
           $('#main-content-wrapper *').removeClass('disabled');
+         $('#back-to-content').removeClass('visible');
      });
 
      $('#hamburger').click(function(){
-          $('#wrapper').addClass('menuDisplayed');
-          $('#main-content-wrapper *').addClass('disabled');
+        $('#wrapper').addClass('menuDisplayed');
+        $('#main-content-wrapper *').addClass('disabled');
+        $('#back-to-content').addClass('visible');
     });
       
     var controller = new ScrollMagic.Controller();    

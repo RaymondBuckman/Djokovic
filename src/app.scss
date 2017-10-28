@@ -305,14 +305,8 @@ h1:focus{
     }
 }
 
-
-#back-to-content{
-    position: fixed;
-    top: 50%;
-    color: $white;
-    font-size: 3em;
-    @include main-font;
-    
+.visible{
+    opacity: 1 !important;
 }
 
 #profile-image{
@@ -395,6 +389,16 @@ h1:focus{
 .sidebar-nav  li:nth-child(n).open a:active,
 .sidebar-nav  li:nth-child(n).open a:focus{
     @include complex-transform;
+}
+
+#back-to-content{
+    position: fixed;
+    top: 50%;
+    color: $white;
+    font-size: 3em;
+    @include main-font;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out; 
 }
 
 #hamburger{
@@ -601,7 +605,7 @@ h1:focus{
     position: relative;
     height: auto;
     width: 100vw;
-    background: url("./img/black-wallpaper-01.jpg") $nrf center;
+    background: transparent;
     background-size: cover;
         
     .flex-container {
@@ -623,7 +627,6 @@ h1:focus{
         //padding: 5px;
         width: 20vw;
         height: 400px;
-        padding: 15px;
         margin-top: 10px;
         margin-bottom: 30px;
         text-align: center;
@@ -641,7 +644,19 @@ h1:focus{
             clip-path: polygon(75% 0, 100% 100%, 25% 100%, 0 0);
         }*/
         
-        
+        a{
+            border: 0px;
+            height: 100%;
+            width: 100%;
+            color: transparent;
+            text-decoration: none !important;
+            display: block; 
+            padding: 15px;
+            
+            a:focus{
+                outline: none;
+            }
+        }
         
         h1{
             font-size: 1.3em;
@@ -662,7 +677,7 @@ h1:focus{
         }
         
         &:nth-child(2){
-            background: url("img/australian-open-01.jpg") $nrs 50% 40%;
+            background: url("img/australian-open-01.jpg") $nrs 50% 70%;
             background-size: 800px;
             
             #ao-header{
@@ -678,8 +693,8 @@ h1:focus{
         }
         
         &:nth-child(3){
-            background: url("img/roland-garros-01.jpg") $nrs 30% 50%;
-            background-size: 800px;
+            background: url("img/roland-garros-01.jpg") $nrs 30% 100%;
+            background-size: 700px;
             
             #fo-header{
                 position: relative;
@@ -688,7 +703,7 @@ h1:focus{
             }
             
             &:hover{
-                background-size: 900px;
+                background-size: 800px;
                 filter: grayscale(0%);
             }
         }
@@ -742,7 +757,7 @@ h1:focus{
         }
         
         &:nth-child(7){
-            background: url("img/atp-500-01.jpg") $nrs 45% 60%;
+            background: url("img/atp-500-01.jpg") $nrs 55% 70%;
             background-size: 800px;
             
             #atp-500-header{
@@ -758,7 +773,7 @@ h1:focus{
         }
         
         &:nth-child(8){
-            background: url("img/atp-250-01.jpg") $nrs 70% 100%;
+            background: url("img/atp-250-01.jpg") $nrs 67% 70%;
             background-size: 800px;
             
             #atp-250-header{
@@ -775,8 +790,8 @@ h1:focus{
         }
         
         &:nth-child(9){
-            background: url("img/trophy-01.jpg") $nrs 92% 20%;
-            background-size: 800px;
+            background: url("img/trophy-01.jpg") $nrs 10% 80%;
+            background-size: 600px;
             
             #money-header{
                 position: relative;
@@ -785,8 +800,12 @@ h1:focus{
             }
             
             &:hover{
-               background-size: 900px; 
+               background-size: 700px; 
             }
+        }
+        
+        &:nth-child(n+2){
+            cursor: pointer;
         }
     }
 }
@@ -1649,7 +1668,7 @@ h1:focus{
     position: relative;
     height: auto;
     width: 100vw;
-    background: url("./img/black-wallpaper-01.jpg") $nrf center;
+    background: transparent;
     background-size: cover;
         
     .flex-container {
