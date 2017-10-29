@@ -25,10 +25,10 @@ export default class Movement extends Component {
                         </div>
                     </div>
                     <div className="row">
-                        <h1 id="movement-main-header" className="mx-auto" role="heading">Movement</h1>
+                        <h1 id="movement-main-header" className="mx-auto scrollMagicH1" role="heading">Movement</h1>
                     </div>
                     <div className="row">
-                        <h2 id="movement-secondary-header" className="mx-auto">The wall</h2>
+                        <h2 id="movement-secondary-header" className="mx-auto scrollMagicH2">The wall</h2>
                     </div>
                 </div>
             </div>
