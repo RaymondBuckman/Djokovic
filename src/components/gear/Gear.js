@@ -7,7 +7,7 @@ export default class Gear extends Component {
         <div>
             <div className="Gear-1" id="gear-section">
                 <ul className="flex-container">
-                    <li className="flex-item"><h1 id="gear" role="heading" tabIndex="0">Gear & Sponsors</h1></li>
+                    <li className="flex-item"><h1 id="gear" className="scrollMagicH1" role="heading" tabIndex="0">Gear & Sponsors</h1></li>
                     <li className="flex-item" id="head-flexbox">
                         <a href="https://www.head.com/en-IC/sports/tennis/" target="_blank" 
                         aria-label="view more Head products on their website" role="link">
