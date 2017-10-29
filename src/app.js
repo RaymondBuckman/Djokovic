@@ -69,9 +69,9 @@ $(document).ready(function(){
     });
     
      $('#main-content-wrapper').click(function(){
-          $('#wrapper').removeClass('menuDisplayed');
-          $('#main-content-wrapper *').removeClass('disabled');
-         $('#back-to-content').removeClass('visible');
+        $('#wrapper').removeClass('menuDisplayed');
+        $('#main-content-wrapper *').removeClass('disabled');
+        $('#back-to-content').removeClass('visible');
      });
 
      $('#hamburger').click(function(){
@@ -80,18 +80,58 @@ $(document).ready(function(){
         $('#back-to-content').addClass('visible');
     });
       
-    var controller = new ScrollMagic.Controller();    
+    var controller = new ScrollMagic.Controller();
+    
+    $('.scrollMagicH1').each(function(){
+        var headerScene = new ScrollMagic.Scene({
+            triggerElement: this,
+            triggerHook: .92,
+            reverse: false
+        })
+        .setClassToggle(this, 'collapse-header')
+        /*
+        .addIndicators({
+            name: 'fade scene',
+            colorTrigger: 'black',
+            colorStart: '#75C695'
+        })*/
+        .addTo(controller);
+    })
+    
+    $('.scrollMagicH2').each(function(){
+        var headerScene = new ScrollMagic.Scene({
+            triggerElement: this,
+            triggerHook: .99,
+            reverse: false
+        })
+        .setClassToggle(this, 'push-up-and-flip')
+        /*
+        .addIndicators({
+            name: 'fade scene',
+            colorTrigger: 'black',
+            colorStart: '#75C695'
+        })*/
+        .addTo(controller);
+    })
+    
+    var heightOfIntro1 = $('.Intro-2').offset().top - $('.Intro-1').offset().top;
+    var heightOfMovement1 = ($('.Intro-2').offset().top - $('.Intro-1').offset().top) * 2;
+    var heightOfBackhand1 = ($('.Backhand-2').offset().top - $('.Backhand-1').offset().top) * 2;
+    var heightOfReturn1 = ($('.Return-2').offset().top - $('.Return-1').offset().top) * 2;
+    var heightOfForehand1 = ( $('.Forehand-2').offset().top - $('.Forehand-1').offset().top ) * 2;
+    var heightOfServe1 = ( $('.Serve-2').offset().top - $('.Serve-1').offset().top ) * 2;
+    var heightOfGrit1 = ( $('.Grit-2').offset().top - $('.Grit-1').offset().top ) * 2;
+    var heightOfCoach1 = ( $('.Coach-2').offset().top - $('.Coach-1').offset().top ) * 2;
     
     var intro1ParallaxTween = TweenMax.to(".Intro-1", 1, {
-        backgroundPositionX: "-=60%",
-        autoRound:false, 
+        backgroundPositionX: "-=65%",
         ease:Power0.ease0ut
     });
 
     var intro1ParallaxScene = new ScrollMagic.Scene({
         triggerElement: ".Intro-1", 
         triggerHook: 0,
-        duration: "150%"
+        duration: heightOfIntro1
     })
     .setTween(intro1ParallaxTween)
     //.addIndicators()
@@ -99,14 +139,13 @@ $(document).ready(function(){
     
     var movement1ParallaxTween = TweenMax.from(".Movement-1", 1, {
         backgroundPositionX: "-=50%",        
-        autoRound:false, 
         ease:Power0.ease0ut
     });
 
     var movement1ParallaxScene = new ScrollMagic.Scene({
         triggerElement: ".Movement-1", 
         triggerHook: 1,
-        duration: "200%"
+        duration: heightOfMovement1
     })
     .setTween(movement1ParallaxTween)
     /*
@@ -120,13 +159,13 @@ $(document).ready(function(){
     var backhand1ParallaxTween = TweenMax.from(".Backhand-1", 1, {
         backgroundSize: "+=100px +=66.6666667px",
         autoRound:false, 
-        ease:Power0.ease0ut
+        ease:Power0.easeIn
     });
 
     var backhand1ParallaxScene = new ScrollMagic.Scene({
         triggerElement: ".Backhand-1", 
         triggerHook: 1,
-        duration: "250%"
+        duration: heightOfBackhand1
     })
     .setTween(backhand1ParallaxTween)
     //.addIndicators()
@@ -141,7 +180,7 @@ $(document).ready(function(){
     var return1ParallaxScene = new ScrollMagic.Scene({
         triggerElement: ".Return-1", 
         triggerHook: 1,
-        duration: "200%"
+        duration: heightOfReturn1
     })
     .setTween(return1ParallaxTween)
     /*
@@ -161,7 +200,7 @@ $(document).ready(function(){
     var forehand1ParallaxScene = new ScrollMagic.Scene({
         triggerElement: ".Forehand-1", 
         triggerHook: 1,
-        duration: "200%"
+        duration: heightOfForehand1
     })
     .setTween(forehand1ParallaxTween)
     /*
@@ -181,7 +220,7 @@ $(document).ready(function(){
     var serve1ParallaxScene = new ScrollMagic.Scene({
         triggerElement: ".Serve-1", 
         triggerHook: 1,
-        duration: "200%"
+        duration: heightOfServe1
     })
     .setTween(serve1ParallaxTween)
     /*
@@ -201,7 +240,7 @@ $(document).ready(function(){
     var grit1ParallaxScene = new ScrollMagic.Scene({
         triggerElement: ".Grit-1", 
         triggerHook: 1,
-        duration: "250%"
+        duration: heightOfGrit1
     })
     .setTween(grit1ParallaxTween)
     //.addIndicators()
@@ -216,7 +255,7 @@ $(document).ready(function(){
     var coach1ParallaxScene = new ScrollMagic.Scene({
         triggerElement: ".Coach-1", 
         triggerHook: 1,
-        duration: "200%"
+        duration: heightOfCoach1
     })
     .setTween(coach1ParallaxTween)
     /*
@@ -319,10 +358,10 @@ $(document).ready(function(){
         var tilt59 = document.getElementById("back-to-content");        
         
         tilt0.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
-        tilt1.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
+        //tilt1.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
         tilt2.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
         tilt3.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
-        tilt4.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
+        //tilt4.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
         tilt5.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
         tilt6.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
         tilt7.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
@@ -334,38 +373,38 @@ $(document).ready(function(){
         tilt13.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
         //tilt14.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
         tilt15.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
-        tilt16.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
+        //tilt16.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
         tilt17.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
-        tilt18.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
+        //tilt18.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
         //tilt19.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
         tilt20.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
-        tilt21.style.transform = "perspective(1000px) rotateY(" + xval + "deg)"; 
+        //tilt21.style.transform = "perspective(1000px) rotateY(" + xval + "deg)"; 
         tilt22.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
-        tilt23.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
+        //tilt23.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
         //tilt24.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
         tilt25.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
-        tilt26.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
+        //tilt26.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
         tilt27.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
-        tilt28.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
+        //tilt28.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
         //tilt29.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
         tilt30.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
-        tilt31.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
+        //tilt31.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
         tilt32.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
-        tilt33.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
+        //tilt33.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
         //tilt34.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
         tilt35.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
-        tilt36.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
+        //tilt36.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
         tilt37.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
-        tilt38.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
+        //tilt38.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
         //tilt39.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
         tilt40.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
-        tilt41.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
+        //tilt41.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
         tilt42.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
-        tilt43.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
+        //tilt43.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
         tilt44.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
-        tilt45.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
+        //tilt45.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
         tilt46.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
-        tilt47.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
+        //tilt47.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
         tilt48.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
         tilt49.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
         tilt50.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
@@ -376,7 +415,7 @@ $(document).ready(function(){
         tilt55.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
         tilt56.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
         tilt57.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
-        tilt58.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
+        //tilt58.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
         tilt59.style.transform = "perspective(1000px) rotateY(" + xval + "deg)";
         
         
