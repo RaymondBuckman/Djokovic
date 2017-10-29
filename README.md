@@ -1,4 +1,4 @@
 # Djokovic
-Homepage for tennis champion Novak Djokovic.
+Unofficial homepage for tennis champion Novak Djokovic.
 
-To view, download /dist folder & opening index.html in your browser.
+To view, download /dist folder & open index.html in your browser.
