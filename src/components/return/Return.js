@@ -25,10 +25,10 @@ export default class Return extends Component {
                         </div>
                     </div>
                     <div className="row">
-                        <h1 id="return-main-header" className="mx-auto" role="heading">Return</h1>
+                        <h1 id="return-main-header" className="mx-auto scrollMagicH1" role="heading">Return</h1>
                     </div>
                     <div className="row">
-                        <h2 id="return-secondary-header" className="mx-auto">Shut it down</h2>
+                        <h2 id="return-secondary-header" className="mx-auto scrollMagicH2">Shut it down</h2>
                     </div>
                 </div>
             </div>
