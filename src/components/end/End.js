@@ -9,10 +9,10 @@ export default class End extends Component {
             <div className="End-1">
                 <div className="container-fluid" id="one-container">
                     <div className="row">   
-                        <h1 id="end-main-header" className="mx-auto" role="heading">Idemo Nole!</h1>
+                        <h1 id="end-main-header" className="mx-auto scrollMagicH1" role="heading">Idemo Nole!</h1>
                     </div>
                     <div className="row">
-                        <h2 id="end-secondary-header" className="mx-auto">Let's go Nole!</h2>
+                        <h2 id="end-secondary-header" className="mx-auto scrollMagicH2" >Let's go Nole!</h2>
                     </div>
                 </div>
             </div>
