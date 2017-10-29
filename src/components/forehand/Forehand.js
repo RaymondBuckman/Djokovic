@@ -25,10 +25,10 @@ export default class Forehand extends Component {
                         </div>
                     </div>
                     <div className="row">
-                        <h1 id="forehand-main-header" className="mx-auto" role="heading">Forehand</h1>
+                        <h1 id="forehand-main-header" className="mx-auto scrollMagicH1" role="heading">Forehand</h1>
                     </div>
                     <div className="row">
-                        <h2 id="forehand-secondary-header" className="mx-auto">The ultimate "weakness"</h2>
+                        <h2 id="forehand-secondary-header" className="mx-auto scrollMagicH2">The ultimate "weakness"</h2>
                     </div>
                 </div>
             </div>
