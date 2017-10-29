@@ -25,10 +25,10 @@ export default class Grit extends Component {
                         </div>
                     </div>
                     <div className="row">
-                        <h1 id="grit-main-header" className="mx-auto" role="heading">Grit</h1>
+                        <h1 id="grit-main-header" className="mx-auto scrollMagicH1" role="heading">Grit</h1>
                     </div>
                     <div className="row">
-                        <h2 id="grit-secondary-header" className="mx-auto">Never give up</h2>
+                        <h2 id="grit-secondary-header" className="mx-auto scrollMagicH2">Never give up</h2>
                     </div>
                 </div>
             </div>
