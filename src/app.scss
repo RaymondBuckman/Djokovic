@@ -17,6 +17,9 @@ $large-header: 5em;
 $medium-header: 2.5em;
 $small-header: 2em;
 
+//letter-spacing value
+$ls: 20px;
+
 $arrow-rotate-out: all 2.0s cubic-bezier(.37,1.01,.8,.99);
 $color-hover: color 0.3s ease-in-out;
 
@@ -131,6 +134,18 @@ $eleven-height: 100vw * .7492; //Multiple based on image proportions
     display: flex;
 }
 
+@mixin letter-spacing-animation-setup{
+    letter-spacing: $ls;
+    opacity: 0;
+    transition: letter-spacing 1s ease-in, opacity 1s ease-in;
+}
+
+@mixin transform-animation-setup{
+    opacity: 0;
+    transform: rotateZ(-5deg) translateY(30px);
+    transition: transform 1s ease-in, opacity 1s ease-in;
+}
+
 
 @mixin for-small-phone-portrait {
     @media (max-width: 399px){ @content; }
@@ -226,6 +241,16 @@ h1:focus{
     width: 100%;
     background: url("./img/black-wallpaper-01.jpg") $nrf center;
     background-size: cover;
+}
+
+.collapse-header{
+    letter-spacing: 10px !important;
+    opacity: 1 !important;
+}
+
+.push-up-and-flip{
+    transform: rotateZ(0deg) translateY(0px) !important;
+    opacity: 1 !important;
 }
 
 /*=============== SIDEBAR ===============*/
@@ -571,7 +596,7 @@ h1:focus{
 
                 &:nth-child(1){
                     height: 50vh;
-                    background: url("img/serbian-flag.jpg") $nrs 0% 50%;
+                    background: url("img/serbian-flag-01.jpg") $nrs 0% 50%;
                     background-size: cover;
                 }
 
@@ -673,6 +698,7 @@ h1:focus{
                 color: #fff;
                 @include main-font;
                 font-size: 3.5em;
+                @include letter-spacing-animation-setup;
             }
         }
         
@@ -834,6 +860,7 @@ h1:focus{
         top: 13vh;
         font-size: $large-header;
         color: #fff;
+        @include letter-spacing-animation-setup;
     }
     
     #movement-secondary-header{
@@ -841,6 +868,7 @@ h1:focus{
         top: 7vh;
         font-size: $medium-header;
         color: #fff;
+        @include transform-animation-setup;
     }
 }
 
@@ -956,6 +984,7 @@ h1:focus{
         top: 13vh;
         font-size: $large-header;
         color: #fff;
+        @include letter-spacing-animation-setup;
     }
     
     #backhand-secondary-header{
@@ -963,6 +992,7 @@ h1:focus{
         top: 7vh;
         font-size: $medium-header;
         color: #fff;
+        @include transform-animation-setup;
     }
 }
 
@@ -1080,6 +1110,7 @@ h1:focus{
         top: 13vh;
         font-size: $large-header;
         color: #fff;
+        @include letter-spacing-animation-setup;
     }
     
     #return-secondary-header{
@@ -1087,6 +1118,7 @@ h1:focus{
         top: 7vh;
         font-size: $medium-header;
         color: #fff;
+        @include transform-animation-setup;
     }
 }
 
@@ -1203,6 +1235,7 @@ h1:focus{
         top: 13vh;
         font-size: $large-header;
         color: #fff;
+        @include letter-spacing-animation-setup;
     }
     
     #forehand-secondary-header{
@@ -1210,6 +1243,7 @@ h1:focus{
         top: 7vh;
         font-size: $medium-header;
         color: #fff;
+        @include transform-animation-setup;
     }
 }
 
@@ -1326,6 +1360,7 @@ h1:focus{
         top: 13vh;
         font-size: $large-header;
         color: #fff;
+        @include letter-spacing-animation-setup;
     }
     
     #serve-secondary-header{
@@ -1333,6 +1368,7 @@ h1:focus{
         top: 7vh;
         font-size: $medium-header;
         color: #fff;
+        @include transform-animation-setup;
     }
 }
 
@@ -1428,7 +1464,6 @@ h1:focus{
 }
 
 .Grit-1{
-    
     $grit-1-height: 100vw * .66659;
     position: relative;
     height: 110vh;
@@ -1449,6 +1484,7 @@ h1:focus{
         top: 13vh;
         font-size: $large-header;
         color: #fff;
+        @include letter-spacing-animation-setup;
     }
     
     #grit-secondary-header{
@@ -1456,6 +1492,7 @@ h1:focus{
         top: 7vh;
         font-size: $medium-header;
         color: #fff;
+        @include transform-animation-setup;
     }
 }
 
@@ -1563,6 +1600,7 @@ h1:focus{
         top: 60vh;
         font-size: $large-header;
         color: #fff;
+        @include letter-spacing-animation-setup;
     }
     
     #coach-secondary-header{
@@ -1570,6 +1608,7 @@ h1:focus{
         top: 53vh;
         font-size: $medium-header;
         color: #fff;
+        @include transform-animation-setup;
     }
 }
 
@@ -1736,6 +1775,7 @@ h1:focus{
                 color: #fff;
                 @include main-font;
                 font-size: 3.5em;
+                @include letter-spacing-animation-setup;
             }
         }
         
@@ -1883,6 +1923,7 @@ h1:focus{
         top: 60vh;
         font-size: $large-header;
         color: $white;
+        @include letter-spacing-animation-setup;
     }
     
     #end-secondary-header{
@@ -1890,6 +1931,7 @@ h1:focus{
         top: 53vh;
         font-size: $medium-header;
         color: $white;
+        @include transform-animation-setup;
     }
 }
 
