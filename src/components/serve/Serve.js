@@ -25,10 +25,10 @@ export default class Serve extends Component {
                         </div>
                     </div>
                     <div className="row">
-                        <h1 id="serve-main-header" className="mx-auto" role="heading">Serve</h1> 
+                        <h1 id="serve-main-header" className="mx-auto scrollMagicH1" role="heading">Serve</h1> 
                     </div>
                     <div className="row">
-                        <h2 id="serve-secondary-header" className="mx-auto">One-way traffic</h2>
+                        <h2 id="serve-secondary-header" className="mx-auto scrollMagicH2">One-way traffic</h2>
                     </div>
                 </div>
             </div>

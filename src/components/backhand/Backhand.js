@@ -25,10 +25,10 @@ export default class Backhand extends Component {
                         </div>
                     </div>
                     <div className="row">
-                        <h1 id="backhand-main-header" className="mx-auto" role="heading">Backhand</h1>
+                        <h1 id="backhand-main-header" className="mx-auto scrollMagicH1" role="heading">Backhand</h1>
                     </div>
                     <div className="row">
-                        <h2 id="backhand-secondary-header" className="mx-auto">Approach at your own peril</h2>
+                        <h2 id="backhand-secondary-header" className="mx-auto scrollMagicH2">Approach at your own peril</h2>
                     </div>
                 </div>
             </div>

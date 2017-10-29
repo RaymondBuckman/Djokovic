@@ -7,7 +7,7 @@ export default class Titles extends Component {
         <div>
             <div className="Titles-1" id="titles-section">
                 <ul className="flex-container">
-                    <li className="flex-item"><h1 id="titles" role="heading" tabIndex="0">Titles</h1></li>
+                    <li className="flex-item"><h1 id="titles" className="scrollMagicH1" role="heading" tabIndex="0">Titles</h1></li>
                     <li className="flex-item" id="ao-titles-flexbox">
                         <a href="https://ausopen.com/" target="_blank" 
                         aria-label="go to the Australian Open's website" role="link">
