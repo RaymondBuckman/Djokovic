@@ -247,7 +247,7 @@ h1:focus{
 
 /*=============== SIDEBAR ===============*/
 #sidebar-wrapper{
-	z-index: 51;
+	z-index: 99;
 	position: fixed;
 	width: 0;
 	height: 100%;
@@ -421,8 +421,8 @@ h1:focus{
 
 #hamburger{
     position: fixed;
-    top: 15px;
-    left: 5px;
+    top: 8px;
+    left: 8px;
     display: inline-block;
     opacity: 0.5;
     transition: opacity 0.3s ease-in, transform 0.3s ease-in;
