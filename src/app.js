@@ -134,7 +134,6 @@ $(document).ready(function(){
         duration: heightOfIntro1
     })
     .setTween(intro1ParallaxTween)
-    //.addIndicators()
     .addTo(controller);
     
     var movement1ParallaxTween = TweenMax.from(".Movement-1", 1, {
@@ -148,12 +147,6 @@ $(document).ready(function(){
         duration: heightOfMovement1
     })
     .setTween(movement1ParallaxTween)
-    /*
-    .addIndicators({
-        name: 'movement',
-        colorTrigger: 'yellow',
-        colorStart: '#75C695'
-    })*/
     .addTo(controller);
     
     var backhand1ParallaxTween = TweenMax.from(".Backhand-1", 1, {
@@ -168,7 +161,6 @@ $(document).ready(function(){
         duration: heightOfBackhand1
     })
     .setTween(backhand1ParallaxTween)
-    //.addIndicators()
     .addTo(controller);
     
     var return1ParallaxTween = TweenMax.from(".Return-1", 1, {
@@ -183,12 +175,6 @@ $(document).ready(function(){
         duration: heightOfReturn1
     })
     .setTween(return1ParallaxTween)
-    /*
-    .addIndicators({
-        name: 'movement',
-        colorTrigger: 'yellow',
-        colorStart: '#75C695'
-    })*/
     .addTo(controller);
     
     var forehand1ParallaxTween = TweenMax.from(".Forehand-1", 1, {
@@ -203,12 +189,6 @@ $(document).ready(function(){
         duration: heightOfForehand1
     })
     .setTween(forehand1ParallaxTween)
-    /*
-    .addIndicators({
-        name: 'movement',
-        colorTrigger: 'yellow',
-        colorStart: '#75C695'
-    })*/
     .addTo(controller);
     
     var serve1ParallaxTween = TweenMax.from(".Serve-1", 1, {
@@ -223,12 +203,6 @@ $(document).ready(function(){
         duration: heightOfServe1
     })
     .setTween(serve1ParallaxTween)
-    /*
-    .addIndicators({
-        name: 'movement',
-        colorTrigger: 'yellow',
-        colorStart: '#75C695'
-    })*/
     .addTo(controller);
     
     var grit1ParallaxTween = TweenMax.to(".Grit-1", 1, {
@@ -243,7 +217,6 @@ $(document).ready(function(){
         duration: heightOfGrit1
     })
     .setTween(grit1ParallaxTween)
-    //.addIndicators()
     .addTo(controller);
     
     var coach1ParallaxTween = TweenMax.from(".Coach-1", 1, {
@@ -258,12 +231,6 @@ $(document).ready(function(){
         duration: heightOfCoach1
     })
     .setTween(coach1ParallaxTween)
-    /*
-    .addIndicators({
-        name: 'movement',
-        colorTrigger: 'yellow',
-        colorStart: '#75C695'
-    })*/
     .addTo(controller);
     
     var end1ParallaxTween = TweenMax.from(".End-1", 1, {
@@ -278,7 +245,6 @@ $(document).ready(function(){
         duration: "250%"
     })
     .setTween(end1ParallaxTween)
-    //.addIndicators()
     .addTo(controller);
     
     /*Handles content tilting based on mouse position*/
