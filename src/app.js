@@ -64,7 +64,7 @@ ReactDOM.render(
 $(document).ready(function(){
     $("#down-arrow").click(function() {
         $('html, body').animate({
-            scrollTop: $(".Intro-2").offset().top
+            scrollTop: $(".intro-div-2").offset().top
         }, 1200);
     });
     
@@ -114,133 +114,133 @@ $(document).ready(function(){
         .addTo(controller);
     })
     
-    var heightOfIntro1 = $('.Intro-2').offset().top - $('.Intro-1').offset().top;
-    var heightOfMovement1 = ($('.Intro-2').offset().top - $('.Intro-1').offset().top) * 2;
-    var heightOfBackhand1 = ($('.Backhand-2').offset().top - $('.Backhand-1').offset().top) * 2;
-    var heightOfReturn1 = ($('.Return-2').offset().top - $('.Return-1').offset().top) * 2;
-    var heightOfForehand1 = ( $('.Forehand-2').offset().top - $('.Forehand-1').offset().top ) * 2;
-    var heightOfServe1 = ( $('.Serve-2').offset().top - $('.Serve-1').offset().top ) * 2;
-    var heightOfGrit1 = ( $('.Grit-2').offset().top - $('.Grit-1').offset().top ) * 2;
-    var heightOfCoach1 = ( $('.Coach-2').offset().top - $('.Coach-1').offset().top ) * 2;
+    var heightOfIntro1 = $('.intro-div-2').offset().top - $('.intro-div-1').offset().top;
+    var heightOfMovement1 = ($('.intro-div-2').offset().top - $('.intro-div-1').offset().top) * 2;
+    var heightOfBackhand1 = ($('.backhand-div-2').offset().top - $('.backhand-div-1').offset().top) * 2;
+    var heightOfReturn1 = ($('.return-div-2').offset().top - $('.return-div-1').offset().top) * 2;
+    var heightOfForehand1 = ( $('.forehand-div-2').offset().top - $('.forehand-div-1').offset().top ) * 2;
+    var heightOfServe1 = ( $('.serve-div-2').offset().top - $('.serve-div-1').offset().top ) * 2;
+    var heightOfGrit1 = ( $('.grit-div-2').offset().top - $('.grit-div-1').offset().top ) * 2;
+    var heightOfCoach1 = ( $('.coach-div-2').offset().top - $('.coach-div-1').offset().top ) * 2;
     
-    var intro1ParallaxTween = TweenMax.to(".Intro-1", 1, {
+    var intro1ParallaxTween = TweenMax.to(".intro-div-1", 1, {
         backgroundPositionX: "-=65%",
         ease:Power0.ease0ut
     });
 
     var intro1ParallaxScene = new ScrollMagic.Scene({
-        triggerElement: ".Intro-1", 
+        triggerElement: ".intro-div-1", 
         triggerHook: 0,
         duration: heightOfIntro1
     })
     .setTween(intro1ParallaxTween)
     .addTo(controller);
     
-    var movement1ParallaxTween = TweenMax.from(".Movement-1", 1, {
+    var movement1ParallaxTween = TweenMax.from(".movement-div-1", 1, {
         backgroundPositionX: "-=50%",        
         ease:Power0.ease0ut
     });
 
     var movement1ParallaxScene = new ScrollMagic.Scene({
-        triggerElement: ".Movement-1", 
+        triggerElement: ".movement-div-1", 
         triggerHook: 1,
         duration: heightOfMovement1
     })
     .setTween(movement1ParallaxTween)
     .addTo(controller);
     
-    var backhand1ParallaxTween = TweenMax.from(".Backhand-1", 1, {
+    var backhand1ParallaxTween = TweenMax.from(".backhand-div-1", 1, {
         backgroundSize: "+=100px +=66.6666667px",
         autoRound:false, 
         ease:Power0.easeIn
     });
 
     var backhand1ParallaxScene = new ScrollMagic.Scene({
-        triggerElement: ".Backhand-1", 
+        triggerElement: ".backhand-div-1", 
         triggerHook: 1,
         duration: heightOfBackhand1
     })
     .setTween(backhand1ParallaxTween)
     .addTo(controller);
     
-    var return1ParallaxTween = TweenMax.from(".Return-1", 1, {
+    var return1ParallaxTween = TweenMax.from(".return-div-1", 1, {
         backgroundPositionY: "-=50%",        
         autoRound:false, 
         ease:Power0.ease0ut
     });
 
     var return1ParallaxScene = new ScrollMagic.Scene({
-        triggerElement: ".Return-1", 
+        triggerElement: ".return-div-1", 
         triggerHook: 1,
         duration: heightOfReturn1
     })
     .setTween(return1ParallaxTween)
     .addTo(controller);
     
-    var forehand1ParallaxTween = TweenMax.from(".Forehand-1", 1, {
+    var forehand1ParallaxTween = TweenMax.from(".forehand-div-1", 1, {
         backgroundPositionX: "+=120%",        
         autoRound:false, 
         ease:Power0.ease0ut
     });
 
     var forehand1ParallaxScene = new ScrollMagic.Scene({
-        triggerElement: ".Forehand-1", 
+        triggerElement: ".forehand-div-1", 
         triggerHook: 1,
         duration: heightOfForehand1
     })
     .setTween(forehand1ParallaxTween)
     .addTo(controller);
     
-    var serve1ParallaxTween = TweenMax.from(".Serve-1", 1, {
+    var serve1ParallaxTween = TweenMax.from(".serve-div-1", 1, {
         backgroundPositionY: "-=30%",        
         autoRound:false, 
         ease:Power0.ease0ut
     });
 
     var serve1ParallaxScene = new ScrollMagic.Scene({
-        triggerElement: ".Serve-1", 
+        triggerElement: ".serve-div-1", 
         triggerHook: 1,
         duration: heightOfServe1
     })
     .setTween(serve1ParallaxTween)
     .addTo(controller);
     
-    var grit1ParallaxTween = TweenMax.to(".Grit-1", 1, {
+    var grit1ParallaxTween = TweenMax.to(".grit-div-1", 1, {
         backgroundSize: "+=100px +=66.66659px",
         autoRound:false, 
         ease:Power0.ease0ut
     });
 
     var grit1ParallaxScene = new ScrollMagic.Scene({
-        triggerElement: ".Grit-1", 
+        triggerElement: ".grit-div-1", 
         triggerHook: 1,
         duration: heightOfGrit1
     })
     .setTween(grit1ParallaxTween)
     .addTo(controller);
     
-    var coach1ParallaxTween = TweenMax.from(".Coach-1", 1, {
+    var coach1ParallaxTween = TweenMax.from(".coach-div-1", 1, {
         backgroundPositionX: "+=130%",        
         autoRound:false, 
         ease:Power0.ease0ut
     });
 
     var coach1ParallaxScene = new ScrollMagic.Scene({
-        triggerElement: ".Coach-1", 
+        triggerElement: ".coach-div-1", 
         triggerHook: 1,
         duration: heightOfCoach1
     })
     .setTween(coach1ParallaxTween)
     .addTo(controller);
     
-    var end1ParallaxTween = TweenMax.from(".End-1", 1, {
+    var end1ParallaxTween = TweenMax.from(".end-div-1", 1, {
         backgroundSize: "+=200px +=130.0002px",
         autoRound:false, 
         ease:Power0.ease0ut
     });
 
     var end1ParallaxScene = new ScrollMagic.Scene({
-        triggerElement: ".End-1", 
+        triggerElement: ".end-div-1", 
         triggerHook: 1,
         duration: "250%"
     })
