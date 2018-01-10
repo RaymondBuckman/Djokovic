@@ -17,7 +17,7 @@ export default class Forehand extends Component {
     }
         return(
         <div>
-            <div className="Forehand-1" id="forehand-section">
+            <div className="forehand-div-1" id="forehand-section">
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-12">
@@ -32,7 +32,7 @@ export default class Forehand extends Component {
                     </div>
                 </div>
             </div>
-            <div className="Forehand-2">
+            <div className="forehand-div-2">
                 <ul className="flex-container">
                     <li className="flex-item"></li>
                     <li className="flex-item">
