@@ -17,7 +17,7 @@ export default class Backhand extends Component {
     }
         return(
         <div>
-            <div className="Backhand-1" id="backhand-section">
+            <div className="backhand-div-1" id="backhand-section">
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-12">
@@ -32,7 +32,7 @@ export default class Backhand extends Component {
                     </div>
                 </div>
             </div>
-            <div className="Backhand-2">
+            <div className="backhand-div-2">
                 <ul className="flex-container">
                     <li className="flex-item"></li>
                     <li className="flex-item">
