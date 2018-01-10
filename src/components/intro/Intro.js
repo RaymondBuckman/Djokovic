@@ -18,7 +18,7 @@ export default class Intro extends Component {
     }
         return(
         <div>
-            <div id="top-of-page" className="Intro-1">
+            <div id="top-of-page" className="intro-div-1">
                 <div className="container" id="one-container">
                     <div className="row">
                         <div className="col-12">
@@ -36,7 +36,7 @@ export default class Intro extends Component {
                     </div>
                 </div>
             </div>
-            <div id="arrow-dest" className="Intro-2">
+            <div id="arrow-dest" className="intro-div-2">
                 <ul className="flex-container-1">
                     <li className="flex-item" id="belgrade-flexbox">
                         <h1 id="belgrade-serbia">Belgrade, Serbia</h1>
