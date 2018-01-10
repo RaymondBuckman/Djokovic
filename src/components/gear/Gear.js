@@ -5,7 +5,7 @@ export default class Gear extends Component {
     render() {
         return(
         <div>
-            <div className="Gear-1" id="gear-section">
+            <div className="gear-div-1" id="gear-section">
                 <ul className="flex-container">
                     <li className="flex-item"><h1 id="gear" className="scrollMagicH1" role="heading" tabIndex="0">Gear & Sponsors</h1></li>
                     <li className="flex-item" id="head-flexbox">
