@@ -6,7 +6,7 @@ export default class Coach extends Component {
     render() {
         return(
         <div>
-            <div className="Coach-1" id="coach-section">
+            <div className="coach-div-1" id="coach-section">
                 <div className="container-fluid">
                     <div className="row">
                         <h1 id="coach-main-header" className="mx-auto scrollMagicH1" role="heading">Coaching Staff</h1>
@@ -16,7 +16,7 @@ export default class Coach extends Component {
                     </div>
                 </div>
             </div>
-            <div className="Coach-2">
+            <div className="coach-div-2">
                 <ul className="flex-container">
                     <li className="flex-item">
                         <ul className="flex-container">
