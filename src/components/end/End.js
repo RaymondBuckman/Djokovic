@@ -6,7 +6,7 @@ export default class End extends Component {
     render() {
         return(
         <div>
-            <div className="End-1">
+            <div className="end-div-1">
                 <div className="container-fluid" id="one-container">
                     <div className="row">   
                         <h1 id="end-main-header" className="mx-auto scrollMagicH1" role="heading">Idemo Nole!</h1>

@@ -5,7 +5,7 @@ export default class Titles extends Component {
     render() {
         return(
         <div>
-            <div className="Titles-1" id="titles-section">
+            <div className="titles-div-1" id="titles-section">
                 <ul className="flex-container">
                     <li className="flex-item"><h1 id="titles" className="scrollMagicH1" role="heading" tabIndex="0">Titles</h1></li>
                     <li className="flex-item" id="ao-titles-flexbox">

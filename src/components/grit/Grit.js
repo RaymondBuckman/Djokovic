@@ -17,7 +17,7 @@ export default class Grit extends Component {
     }
         return(
         <div>
-            <div className="Grit-1" id="grit-section">
+            <div className="grit-div-1" id="grit-section">
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-12">
@@ -32,7 +32,7 @@ export default class Grit extends Component {
                     </div>
                 </div>
             </div>
-            <div className="Grit-2">
+            <div className="grit-div-2">
                 <ul className="flex-container">
                     <li className="flex-item"></li>
                     <li className="flex-item">

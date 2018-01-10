@@ -17,7 +17,7 @@ export default class Serve extends Component {
     }
         return(
         <div>
-            <div className="Serve-1" id="serve-section">
+            <div className="serve-div-1" id="serve-section">
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-12">
@@ -32,7 +32,7 @@ export default class Serve extends Component {
                     </div>
                 </div>
             </div>
-            <div className="Serve-2">
+            <div className="serve-div-2">
                 <ul className="flex-container">
                     <li className="flex-item">
                         <ul className="flex-container">

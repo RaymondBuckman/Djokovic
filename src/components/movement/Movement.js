@@ -17,7 +17,7 @@ export default class Movement extends Component {
     }
         return(
         <div>
-            <div className="Movement-1" id="movement-section">
+            <div className="movement-div-1" id="movement-section">
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-12">
@@ -32,7 +32,7 @@ export default class Movement extends Component {
                     </div>
                 </div>
             </div>
-            <div className="Movement-2">
+            <div className="movement-div-2">
                 <ul className="flex-container">
                     <li className="flex-item">
                         <ul className="flex-container-2">
