@@ -17,7 +17,7 @@ export default class Return extends Component {
     }
         return(
         <div>
-            <div className="Return-1" id="return-section">
+            <div className="return-div-1" id="return-section">
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-12">
@@ -32,7 +32,7 @@ export default class Return extends Component {
                     </div>
                 </div>
             </div>
-            <div className="Return-2">
+            <div className="return-div-2">
                 <ul className="flex-container">
                     <li className="flex-item">
                         <ul className="flex-container">
