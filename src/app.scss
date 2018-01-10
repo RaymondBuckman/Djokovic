@@ -56,15 +56,6 @@ $eleven-height: 100vw * .7492; //Multiple based on image proportions
     100% {opacity: 0;}
 }
 
-@keyframes belgradeSlideshow{
-    0%  {background: url("img/belgrade-01.jpg") $nrs 60% 50%; background-size: 1200px;}
-    20% {background: url("img/belgrade-02.jpg") $nrs 60% 50%; background-size: 1200px;}
-    40% {background: url("img/belgrade-03.jpg") $nrs 60% 50%; background-size: 1200px;}
-    60% {background: url("img/belgrade-04.jpg") $nrs 60% 50%; background-size: 1200px;}
-    80% {background: url("img/belgrade-05.jpg") $nrs 60% 50%; background-size: 1200px;}
-    100%  {background: url("img/belgrade-01.jpg") $nrs 60% 50%; background-size: 1200px;}
-}
-
 //mixins
 @mixin main-font{
     font-family: $main-font, Arial, Helvetica, serif;
